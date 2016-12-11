@@ -1,0 +1,6 @@
+Library
+ProjectSettings
+*.sln
+*.suo
+.vs
+
