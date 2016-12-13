@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ObjectNode : Node {
+public class ConstNode : ASTNode {
 
     protected override string information()
     {
@@ -12,7 +12,7 @@ public class ObjectNode : Node {
     {
         return true;
     }
-    public ObjectNode(AudubonValue v)
+    public ConstNode(AudubonValue v)
     {
         Value = v;
     }

@@ -4,17 +4,39 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-public class FunctionNode : OperatorNode {
+public class FunctionNode : ASTNode {
+    [SerializeField]
+    protected List<ASTNode> args;
+    protected string name;
+
+    protected int _argNum = 0;
+
+    protected void evalNode(int i) {
+        if (i < 0 || i >= args.Count) {
+            Debug.LogError(name + ": " + i + "番目の引数が存在しません");
+            return;
+        }
+        args[i].eval();
+    }
+    protected void evalAllNode() {
+        foreach (var n in args) {
+            n.eval();
+        }
+    }
+
+    protected bool isCorrectArg() {
+        return _argNum == args.Count;
+    }
 
     /// <summary>
     /// 主に初期化
     /// </summary>
     void Start()
     {
-        OperatorName = "Function";
+        name = "Function";
     }
 
-    public override AudubonValue execute()
+    public override AudubonValue eval()
     {
         if (hasValue())
         {
@@ -47,7 +69,7 @@ public class FunctionNode : OperatorNode {
         }
         else
         {
-            return OperatorName;
+            return name;
         }
     }
 

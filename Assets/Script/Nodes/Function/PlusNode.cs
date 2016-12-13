@@ -6,7 +6,7 @@ public class PlusNode : FunctionNode {
 
     void Start()
     {
-        OperatorName = "+";
+        name = "+";
         _argNum = 2;
     }
     protected override AudubonValue run(AudubonValue[] values)

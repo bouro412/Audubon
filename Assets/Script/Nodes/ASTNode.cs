@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Node : MonoBehaviour
+public class ASTNode : MonoBehaviour
 {
     public AudubonValue Value { get; protected set; }
     TextMesh info;
@@ -48,7 +48,7 @@ public class Node : MonoBehaviour
         }
         info.text = this.information();
     }
-    public virtual AudubonValue execute()
+    public virtual AudubonValue eval()
     {
         return getValue();
     }

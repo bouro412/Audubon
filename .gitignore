@@ -3,4 +3,5 @@ ProjectSettings
 *.sln
 *.suo
 .vs
+*.csproj
 

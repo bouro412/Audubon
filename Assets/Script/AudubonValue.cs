@@ -20,14 +20,26 @@ public class AudubonValue{
     {
 
     }
+    public virtual int? getInt() {
+        return null;
+    }
+    public virtual float? getFloat() {
+        return null;
+    }
+    public virtual bool? getBool() {
+        return null;
+    }
 }
 
 public class AudubonInt: AudubonValue
-{   
+{
     public AudubonInt(int v)
     {
         Value = v;
         Type = AudubonType.Int;
+    }
+    public override int? getInt() {
+        return (int)Value;
     }
 }
 
@@ -38,6 +50,9 @@ public class AudubonFloat : AudubonValue
         Value = v;
         Type = AudubonType.Float;
     }
+    public override float? getFloat() {
+        return (float)Value;
+    }
 }
 
 public class AudubonBool : AudubonValue
@@ -47,4 +62,8 @@ public class AudubonBool : AudubonValue
         Value = v;
         Type = AudubonType.Bool;
     }
+    public override bool? getBool() {
+        return (bool)Value;
+    }
+
 }
