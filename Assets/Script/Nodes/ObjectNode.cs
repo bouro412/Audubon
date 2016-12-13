@@ -1,20 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ObjectNode<T> : Node<T> {
-    T value;
+public class ObjectNode : Node {
+
     protected override string information()
     {
-        return value.ToString();
+        return Value.ToString();
     }
 
     public override bool hasValue()
     {
         return true;
     }
-
-    public override T getValue()
+    public ObjectNode(AudubonValue v)
     {
-        return value;
+        Value = v;
     }
 }

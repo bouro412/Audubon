@@ -3,20 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class AudubonValue
+public class AValue
 {
     public object value { get; protected set; }
-    public AudubonValue()
+    public AValue()
     {
 
     }
-    public AudubonValue(object v)
+    public AValue(object v)
     {
         value = v;
     }
 }
 
-public class AInt : AudubonValue
+public class AInt : AValue
 {
     public int value { get; protected set; }
     public AInt (int v)
@@ -25,7 +25,7 @@ public class AInt : AudubonValue
     }
 }
 
-public class AFloat : AudubonValue
+public class AFloat : AValue
 {
     public float value { get; protected set; }
     public AFloat (float v)
@@ -34,7 +34,7 @@ public class AFloat : AudubonValue
     }
 }
 
-public class ABool : AudubonValue
+public class ABool : AValue
 {
     public bool value { get; protected set; }
     public ABool (bool b)

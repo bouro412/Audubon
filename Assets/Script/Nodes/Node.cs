@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Node<T> : MonoBehaviour
+public class Node : MonoBehaviour
 {
+    public AudubonValue Value { get; protected set; }
     TextMesh info;
 
     // Use this for initialization
@@ -22,12 +23,12 @@ public class Node<T> : MonoBehaviour
 
     public virtual bool hasValue()
     {
-        return false;
+        return Value != null;
     }
 
-    public virtual T getValue()
+    public virtual AudubonValue getValue()
     {
-        return default(T);
+        return Value;
     }
 
     void run()
@@ -47,7 +48,7 @@ public class Node<T> : MonoBehaviour
         }
         info.text = this.information();
     }
-    public virtual T execute()
+    public virtual AudubonValue execute()
     {
         return getValue();
     }

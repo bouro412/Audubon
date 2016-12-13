@@ -4,93 +4,61 @@ using System.Linq;
 
 public class PlusNode : FunctionNode {
 
-    string fname = "+";
-    bool executed = false;
-    int? resultInt = null;
-    float? resultFloat = null;
-	// Use this for initialization
-	void Start () {
-	
-	}
-
-	public override object execute () {
-        if (hasValue())
+    void Start()
+    {
+        OperatorName = "+";
+        _argNum = 2;
+    }
+    protected override AudubonValue run(AudubonValue[] values)
+    {
+        AudubonValue a = values[0];
+        AudubonValue b = values[1];
+        if(a.Type == AudubonValue.AudubonType.Int)
         {
-            return getValue();
+            if(b.Type == AudubonValue.AudubonType.Int)
+            {
+                return new AudubonInt((int)a.Value + (int)b.Value);
+            }else if(b.Type == AudubonValue.AudubonType.Float)
+            {
+                return new AudubonFloat((int) a.Value + (float)b.Value);
+            }
         }
-        var argnodes = args.Select(obj => obj.GetComponent<ObjectNode>()).ToArray();
-        base.Update();
-        if (args.Count >= 2 && argnodes.All(node =>
-                node != null && node.hasValue()))  
-        
+        else if(a.Type == AudubonValue.AudubonType.Float)
         {
-            run();
-            return getValue();
+            if(isNumber(b))
+            {
+                return new AudubonFloat((float)a.Value + (float)b.Value);
+            }
+        }
+        Debug.LogError("TypeError");
+        return null;
+    }
+    bool isNumber(AudubonValue v)
+    {
+        return v.Type == AudubonValue.AudubonType.Float || 
+               v.Type == AudubonValue.AudubonType.Int;
+    }
+    int? getInt(AudubonValue v)
+    {
+        if(v.Type == AudubonValue.AudubonType.Int)
+        {
+            return (int)v.Value;
         }
         else
         {
-            foreach(var n in argnodes)
-            {
-                n.execute();
-            }
             return null;
         }
-	}
-
-
-    public override bool hasValue()
-    {
-        return executed;
     }
-
-    public override object getValue()
+    float? getFloat(AudubonValue v)
     {
-        return resultInt ?? resultFloat;
-    }
-
-    void Update()
-    {
-        base.Update();
-    }
-
-    void run()
-    {
-        var vals = args.Select(obj => obj.GetComponent<ObjectNode>().getValue()).ToArray();
-        float result = 0;
-        bool isFloat = false;
-        foreach(var v in vals)
+        if (v.Type == AudubonValue.AudubonType.Float)
         {
-            if (v.GetType() == typeof(int))
-            {
-                result += (int)v;
-            }
-            else if (v.GetType() == typeof(float))
-            {
-                result += (float)v;
-                isFloat = true;
-            }
-            else return;
-        }
-        if (isFloat)
-        {
-            resultFloat = result;
+            return (float)v.Value;
         }
         else
         {
-            resultInt = (int)result;
+            return null;
         }
-        executed = true;
     }
 
-    protected override string information()
-    {
-        if (hasValue())
-        {
-            return getValue().ToString();
-        }
-        else
-        {
-            return fname;
-        }
-    }
 }

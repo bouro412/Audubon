@@ -4,53 +4,50 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-public class FunctionNode<T> : ObjectNode<T> {
-    string fname;
-    [SerializeField]
-    protected List<GameObject> args;
-    int argnum = 0;
-    bool executed = false;
-    
+public class FunctionNode : OperatorNode {
 
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-    protected override string information()
+    /// <summary>
+    /// 主に初期化
+    /// </summary>
+    void Start()
     {
-        return fname;
+        OperatorName = "Function";
     }
 
-    void setArg(GameObject arg)
-    {
-        args.Add(arg);
-    }
-
-    public override T execute()
+    public override AudubonValue execute()
     {
         if (hasValue())
         {
             return getValue();
         }
-        var argnodes = args.Select(obj => obj.GetComponent<Node<>>()).ToArray();
-        base.Update();
-        if (args.Count >= argnum && argnodes.All(node =>
-                node != null && node.hasValue()))
-
+        if (!isCorrectArg())
         {
-            run();
-            return getValue();
+            return null;
+        }else if(!args.All(n => n.hasValue()))
+        {
+            evalAllNode();
+            return null;
         }
         else
         {
-            foreach (var n in argnodes)
-            {
-                n.execute();
-            }
-            return null;
+            var val = run(args.Select(n => n.getValue()).ToArray());
+            Value = val;
+            return val;
+        }
+    }
+    protected virtual AudubonValue run(AudubonValue[] values)
+    {
+        return null;
+    }
+    protected override string information()
+    {
+        if (hasValue())
+        {
+            return Value.Value.ToString();
+        }
+        else
+        {
+            return OperatorName;
         }
     }
 

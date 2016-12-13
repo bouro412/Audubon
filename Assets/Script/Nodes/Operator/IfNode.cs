@@ -1,86 +1,79 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IfNode : ObjectNode
+public class IfNode : OperatorNode
 {
-    [SerializeField]
-    ObjectNode Test;
-    [SerializeField]
-    ObjectNode Then;
-    [SerializeField]
-    ObjectNode Else;
-
-    object _notTested = new object();
-    object _testValue;
-
-    object value;
-    bool executed = false;
+    AudubonValue _testValue = null;
 
     void Start()
     {
-        _testValue = _notTested;
+        _argNum = 3;
+        OperatorName = "if";
     }
 
     // Update is called once per frame
-    void Update()
+    new void Update()
     {
         base.Update();
         execute();
         Debug.Log("test : " + _testValue);
     }
 
-    public override object execute()
+    public override AudubonValue execute()
     {
         if (hasValue())
         {
             return getValue();
         }
-        if (_testValue == _notTested)
+        if (!isCorrectArg())
+        {
+            return null;
+        }
+        var Test = args[0];
+        var Then = args[1];
+        var Else = args[2];
+        if (_testValue == null)
         {
             Test.execute();
             if (Test.hasValue())
             {
-                _testValue = Test.getValue();
+                _testValue = Test.Value;
             }
         }
-        if (_testValue.GetType() == typeof(bool) && (bool)_testValue == true)
+        if (_testValue.Type == AudubonValue.AudubonType.Bool && 
+            (bool)_testValue.Value == true)
         {
             Then.execute();
             if (Then.hasValue())
             {
-                value = Then.getValue();
-                executed = true;
+                Value = Then.getValue();
             }
         }
-        else if (_testValue.GetType() == typeof(bool) && (bool)_testValue == false)
+        else if (_testValue.Type == AudubonValue.AudubonType.Bool &&
+                (bool)_testValue.Value == false)
         {
             Else.execute();
             if (Else.hasValue())
             {
-                value = Else.getValue();
-                executed = true;
+                Value = Else.getValue();
             }
         }
         else
         {
             Debug.LogError("ifの条件式にはBoolを入れてください");
         }
-        return getValue();
+        return null;
     }
 
-    public override bool hasValue()
-    {
-        return executed;
-    }
     protected override string information()
     {
         if (hasValue())
         {
-            return value.ToString();
+            return Value.Value.ToString();
         }
         else
         {
-            return "if";
+            return OperatorName;
         }
     }
 }
