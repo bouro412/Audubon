@@ -16,21 +16,21 @@ public class IfNode : ASTNode
     {
         base.Update();
         eval();
-        Debug.Log("test : " + _testValue);
+        Debug.Log("test : " + _testValue.Value);
     }
 
     public override AudubonValue eval()
     {
         if (hasValue())
         {
-            return getValue();
+            return GetLangValue();
         }
         if (_testValue == null)
         {
             Cond.eval();
             if (Cond.hasValue())
             {
-                _testValue = Cond.Value;
+                _testValue = Cond.GetLangValue();
             }
         }
         var test = _testValue.getBool();
@@ -39,7 +39,7 @@ public class IfNode : ASTNode
             Then.eval();
             if (Then.hasValue())
             {
-                Value = Then.getValue();
+                SetLangValue(Then.GetLangValue());
             }
         }
         else if (test == false)
@@ -47,7 +47,7 @@ public class IfNode : ASTNode
             Else.eval();
             if (Else.hasValue())
             {
-                Value = Else.getValue();
+                SetLangValue(Else.GetLangValue());
             }
         }
         else
@@ -61,7 +61,7 @@ public class IfNode : ASTNode
     {
         if (hasValue())
         {
-            return Value.Value.ToString();
+            return GetLangValue().Value.ToString();
         }
         else
         {

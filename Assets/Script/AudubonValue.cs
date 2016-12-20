@@ -29,6 +29,9 @@ public class AudubonValue{
     public virtual bool? getBool() {
         return null;
     }
+    public virtual void AddDefaultNode(GameObject obj)
+    {
+    }
 }
 
 public class AudubonInt: AudubonValue
@@ -40,6 +43,11 @@ public class AudubonInt: AudubonValue
     }
     public override int? getInt() {
         return (int)Value;
+    }
+    public override void AddDefaultNode(GameObject obj)
+    {
+        obj.AddComponent<IntNode>();
+        obj.GetComponent<IntNode>().InitValue = getInt() ?? default(int);
     }
 }
 
@@ -53,6 +61,11 @@ public class AudubonFloat : AudubonValue
     public override float? getFloat() {
         return (float)Value;
     }
+    public override void AddDefaultNode(GameObject obj)
+    {
+        obj.AddComponent<FloatNode>();
+        obj.GetComponent<FloatNode>().InitValue = getFloat() ?? default(float);
+    }
 }
 
 public class AudubonBool : AudubonValue
@@ -64,6 +77,11 @@ public class AudubonBool : AudubonValue
     }
     public override bool? getBool() {
         return (bool)Value;
+    }
+    public override void AddDefaultNode(GameObject obj)
+    {
+        obj.AddComponent<BoolNode>();
+        obj.GetComponent<BoolNode>().InitValue = getBool() ?? default(bool);
     }
 
 }

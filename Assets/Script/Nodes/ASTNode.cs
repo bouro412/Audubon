@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ASTNode : MonoBehaviour
 {
-    public AudubonValue Value { get; protected set; }
+    AudubonValue LangValue { get; set; }
     TextMesh info;
 
     // Use this for initialization
@@ -23,12 +23,17 @@ public class ASTNode : MonoBehaviour
 
     public virtual bool hasValue()
     {
-        return Value != null;
+        return LangValue != null;
     }
 
-    public virtual AudubonValue getValue()
+    public virtual AudubonValue GetLangValue()
     {
-        return Value;
+        return LangValue;
+    }
+
+    protected virtual void SetLangValue(AudubonValue value)
+    {
+        LangValue = value;
     }
 
     void run()
@@ -50,6 +55,6 @@ public class ASTNode : MonoBehaviour
     }
     public virtual AudubonValue eval()
     {
-        return getValue();
+        return GetLangValue();
     }
 }

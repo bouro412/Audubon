@@ -7,13 +7,13 @@ using System.Linq;
 public class FunctionNode : ASTNode {
     [SerializeField]
     protected List<ASTNode> args;
-    protected string name;
+    protected string FunctionName;
 
     protected int _argNum = 0;
 
     protected void evalNode(int i) {
         if (i < 0 || i >= args.Count) {
-            Debug.LogError(name + ": " + i + "番目の引数が存在しません");
+            Debug.LogError(FunctionName + ": " + i + "番目の引数が存在しません");
             return;
         }
         args[i].eval();
@@ -33,14 +33,14 @@ public class FunctionNode : ASTNode {
     /// </summary>
     void Start()
     {
-        name = "Function";
+        FunctionName = "Function";
     }
 
     public override AudubonValue eval()
     {
         if (hasValue())
         {
-            return getValue();
+            return GetLangValue();
         }
         if (!isCorrectArg())
         {
@@ -52,8 +52,8 @@ public class FunctionNode : ASTNode {
         }
         else
         {
-            var val = run(args.Select(n => n.getValue()).ToArray());
-            Value = val;
+            var val = run(args.Select(n => n.GetLangValue()).ToArray());
+            SetLangValue(val);
             return val;
         }
     }
@@ -65,11 +65,11 @@ public class FunctionNode : ASTNode {
     {
         if (hasValue())
         {
-            return Value.Value.ToString();
+            return GetLangValue().Value.ToString();
         }
         else
         {
-            return name;
+            return FunctionName;
         }
     }
 
