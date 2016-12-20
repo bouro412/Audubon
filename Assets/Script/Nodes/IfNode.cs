@@ -16,7 +16,6 @@ public class IfNode : ASTNode
     {
         base.Update();
         eval();
-        Debug.Log("test : " + _testValue.Value);
     }
 
     public override AudubonValue eval()

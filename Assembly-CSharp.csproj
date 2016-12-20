@@ -48,12 +48,17 @@
   <ItemGroup>
      <Compile Include="Assets\Script\AudubonValue.cs" />
      <Compile Include="Assets\Script\Nodes\ASTNode.cs" />
+     <Compile Include="Assets\Script\Nodes\BoolNode.cs" />
      <Compile Include="Assets\Script\Nodes\ConstNode.cs" />
+     <Compile Include="Assets\Script\Nodes\FloatNode.cs" />
+     <Compile Include="Assets\Script\Nodes\ForNode.cs" />
      <Compile Include="Assets\Script\Nodes\Function\PlusNode.cs" />
      <Compile Include="Assets\Script\Nodes\FunctionNode.cs" />
      <Compile Include="Assets\Script\Nodes\IfNode.cs" />
+     <Compile Include="Assets\Script\Nodes\IntNode.cs" />
+     <Compile Include="Assets\Script\Nodes\VariableNode.cs" />
+     <Compile Include="Assets\Script\Nodes\VariableSourceNode.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />
-     <Compile Include="Assets\Script\Type.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity5.5.0f3/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
