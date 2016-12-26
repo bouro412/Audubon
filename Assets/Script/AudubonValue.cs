@@ -3,17 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudubonValue{
-    public enum AudubonType
-    {
-        Int,
-        Float,
-        Bool
-    }
-    public AudubonType Type { get; protected set; }
     public object Value { get; protected set; }
-    public AudubonValue(AudubonType type, object value)
+    public AudubonValue(object value)
     {
-        Type = type;
         Value = value;
     }
     public AudubonValue()
@@ -32,6 +24,10 @@ public class AudubonValue{
     public virtual void AddDefaultNode(GameObject obj)
     {
     }
+    public virtual string information()
+    {
+        return Value.ToString();
+    }
 }
 
 public class AudubonInt: AudubonValue
@@ -39,15 +35,12 @@ public class AudubonInt: AudubonValue
     public AudubonInt(int v)
     {
         Value = v;
-        Type = AudubonType.Int;
     }
     public override int? getInt() {
         return (int)Value;
     }
     public override void AddDefaultNode(GameObject obj)
     {
-        obj.AddComponent<IntNode>();
-        obj.GetComponent<IntNode>().InitValue = getInt() ?? default(int);
     }
 }
 
@@ -56,15 +49,12 @@ public class AudubonFloat : AudubonValue
     public AudubonFloat(float v)
     {
         Value = v;
-        Type = AudubonType.Float;
     }
     public override float? getFloat() {
         return (float)Value;
     }
     public override void AddDefaultNode(GameObject obj)
     {
-        obj.AddComponent<FloatNode>();
-        obj.GetComponent<FloatNode>().InitValue = getFloat() ?? default(float);
     }
 }
 
@@ -73,15 +63,24 @@ public class AudubonBool : AudubonValue
     public AudubonBool(bool v)
     {
         Value = v;
-        Type = AudubonType.Bool;
     }
     public override bool? getBool() {
         return (bool)Value;
     }
     public override void AddDefaultNode(GameObject obj)
     {
-        obj.AddComponent<BoolNode>();
-        obj.GetComponent<BoolNode>().InitValue = getBool() ?? default(bool);
     }
 
+}
+
+public class AudubonNil : AudubonValue
+{
+    public AudubonNil()
+    {
+
+    }
+    public override string information()
+    {
+        return "nil";
+    }
 }

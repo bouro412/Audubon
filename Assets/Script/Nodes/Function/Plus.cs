@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-public class PlusNode : FunctionNode {
+public class Plus : Function {
 
     void Start()
     {
