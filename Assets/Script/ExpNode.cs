@@ -1,14 +1,20 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
-public class ASTNode : MonoBehaviour
+public class ExpNode : MonoBehaviour
 {
+    public AST expression;
     AudubonValue LangValue { get; set; }
     TextMesh info;
+    public AST[] args;
+    AST[] argsCache;
 
     // Use this for initialization
     void Start()
     {
+        argsCache = args;
     }
 
     // Update is called once per frame
@@ -19,6 +25,21 @@ public class ASTNode : MonoBehaviour
         {
             GetComponent<MeshRenderer>().material.color = Color.blue;
         }
+        if (isEdited())
+        {
+            expression.updateArgs(args);
+        }
+    }
+
+    bool isEdited()
+    {
+        var ret = args.SequenceEqual(argsCache);
+        if (!ret)
+        {
+            argsCache = args;
+            return true;
+        }
+        return false;
     }
 
     public virtual bool hasValue()
@@ -43,7 +64,7 @@ public class ASTNode : MonoBehaviour
 
     protected virtual string information()
     {
-        return "hogei";
+        return expression.information();
     }
     void displayInformation()
     {
@@ -53,8 +74,8 @@ public class ASTNode : MonoBehaviour
         }
         info.text = this.information();
     }
-    public virtual AudubonValue eval()
+    public virtual AudubonValue eval(AudubonEnv env)
     {
-        return GetLangValue();
+        return expression.eval(env);
     }
 }

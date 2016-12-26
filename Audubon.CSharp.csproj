@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -110,17 +110,16 @@
     <Compile Include="Assets\Lib\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
     <Compile Include="Assets\Lib\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
     <Compile Include="Assets\Lib\SteamVR\Scripts\SteamVR_Utils.cs" />
+    <Compile Include="Assets\Script\AudubonEnv.cs" />
     <Compile Include="Assets\Script\AudubonValue.cs" />
-    <Compile Include="Assets\Script\Nodes\ASTNode.cs" />
-    <Compile Include="Assets\Script\Nodes\BoolNode.cs" />
-    <Compile Include="Assets\Script\Nodes\ConstNode.cs" />
-    <Compile Include="Assets\Script\Nodes\FloatNode.cs" />
-    <Compile Include="Assets\Script\Nodes\ForNode.cs" />
-    <Compile Include="Assets\Script\Nodes\Function\PlusNode.cs" />
-    <Compile Include="Assets\Script\Nodes\FunctionNode.cs" />
-    <Compile Include="Assets\Script\Nodes\IfNode.cs" />
-    <Compile Include="Assets\Script\Nodes\IntNode.cs" />
-    <Compile Include="Assets\Script\Nodes\VariableNode.cs" />
+    <Compile Include="Assets\Script\ExpNode.cs" />
+    <Compile Include="Assets\Script\Nodes\AST.cs" />
+    <Compile Include="Assets\Script\Nodes\Const.cs" />
+    <Compile Include="Assets\Script\Nodes\For.cs" />
+    <Compile Include="Assets\Script\Nodes\Function.cs" />
+    <Compile Include="Assets\Script\Nodes\Function\Plus.cs" />
+    <Compile Include="Assets\Script\Nodes\If.cs" />
+    <Compile Include="Assets\Script\Nodes\Variable.cs" />
     <Compile Include="Assets\Script\Nodes\VariableSourceNode.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
   </ItemGroup>
@@ -131,6 +130,8 @@
     <None Include="Assets\Lib\SteamVR\Resources\SteamVR_Fade.shader" />
     <None Include="Assets\Lib\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
     <None Include="Assets\Lib\SteamVR\readme.txt" />
+    <None Include="Assets\NewSurfaceShader.shader" />
+    <None Include="Assets\envShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForNode : MonoBehaviour {
-    public int start;
-    public int end;
-    public string varName;
-    VariableNode variableNode;
+public class For : AST {
+    AST start;
+    AST end;
+    AST varName;
+    Variable variableNode;
 
-    public VariableNode variableNodePrehab;
+    public Variable variableNodePrehab;
 
 	// Use this for initialization
 	void Start () {
