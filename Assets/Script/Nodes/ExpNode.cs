@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class ExpNode : MonoBehaviour
 {
-    public AST expression;
+    public IAst expression;
     AudubonValue LangValue { get; set; }
     TextMesh info;
-    public AST[] args;
-    AST[] argsCache;
+    public IAst[] args;
+    IAst[] argsCache;
 
     // Use this for initialization
     void Start()

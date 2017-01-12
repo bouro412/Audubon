@@ -1,22 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class For : AST {
-    AST start;
-    AST end;
-    AST varName;
+public class For : IAst {
+    IAst start;
+    IAst end;
+    IAst varName;
     Variable variableNode;
 
     public Variable variableNodePrehab;
 
-	// Use this for initialization
-	void Start () {
+    public string information()
+    {
+        throw new NotImplementedException();
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public AudubonValue eval(AudubonEnv env)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void updateArgs(IAst[] args)
+    {
+        throw new NotImplementedException();
+    }
 }

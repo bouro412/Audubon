@@ -1,19 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class Const : AST
+public class Const : IAst
 {
     AudubonValue audubonValue { get; set; }
 
-    public override string information()
+    public string information()
     {
         return audubonValue.information();
     }
 
-    public override AudubonValue eval(AudubonEnv env)
+    public AudubonValue eval(AudubonEnv env)
     {
         return audubonValue;
     }
+
+    public void updateArgs(IAst[] args)
+    {
+        throw new NotImplementedException();
+    }
+
     public Const()
     {
 

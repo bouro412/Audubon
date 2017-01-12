@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class If : AST
+public class If : IAst
 {
-    public AST Cond;
-    public AST Then;
-    public AST Else;
+    public IAst Cond;
+    public IAst Then;
+    public IAst Else;
 
-    public override void updateArgs(AST[] args)
+    public void updateArgs(IAst[] args)
     {
         try
         {
@@ -21,7 +21,7 @@ public class If : AST
         }
     }
 
-    public override AudubonValue eval(AudubonEnv env)
+    public AudubonValue eval(AudubonEnv env)
     {
         if(Cond == null || Then == null)
         {
@@ -50,7 +50,7 @@ public class If : AST
 
     }
 
-    public override string information()
+    public string information()
     {
         return "if";
     }

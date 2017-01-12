@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-public class Function : AST {
+public class Function : IAst {
     [SerializeField]
-    protected AST[] args;
+    protected IAst[] args;
     protected string FunctionName;
 
     protected int _argNum = 0;
@@ -16,7 +16,7 @@ public class Function : AST {
         return _argNum == args.Length;
     }
 
-    public override AudubonValue eval(AudubonEnv env)
+    public AudubonValue eval(AudubonEnv env)
     {
         if (!isCorrectArg())
         {
@@ -27,7 +27,7 @@ public class Function : AST {
         return run(vals);
     }
 
-    public override void updateArgs(AST[] args)
+    public void updateArgs(IAst[] args)
     {
         this.args = args;
     }
@@ -37,7 +37,7 @@ public class Function : AST {
         Debug.LogError("メソッドの中身が定義されていません");
         return null;
     }
-    public override string information()
+    public string information()
     {
         return FunctionName;
     }
