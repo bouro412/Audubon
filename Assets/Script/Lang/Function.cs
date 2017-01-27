@@ -27,9 +27,9 @@ public class Function : IAst {
         return run(vals);
     }
 
-    public void updateArgs(IAst[] args)
+    public void UpdateArgs(IEnumerable<IAst> args)
     {
-        this.args = args;
+        this.args = args.ToArray();
     }
 
     protected virtual AudubonValue run(AudubonValue[] values)

@@ -17,7 +17,7 @@ public class Variable : IAst
         return env.apply(VarName);
     }
 
-    public void updateArgs(IAst[] args)
+    public void UpdateArgs(IEnumerable<IAst> args)
     {
         throw new NotImplementedException();
     }

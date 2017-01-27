@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class Const : IAst
 {
@@ -16,7 +17,7 @@ public class Const : IAst
         return audubonValue;
     }
 
-    public void updateArgs(IAst[] args)
+    public void UpdateArgs(IEnumerable<IAst> args)
     {
         throw new NotImplementedException();
     }

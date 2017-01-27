@@ -21,7 +21,7 @@ public class For : IAst {
         throw new NotImplementedException();
     }
 
-    public void updateArgs(IAst[] args)
+    public void UpdateArgs(IEnumerable<IAst> args)
     {
         throw new NotImplementedException();
     }

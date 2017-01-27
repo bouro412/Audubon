@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
+using System.Collections.Generic;
 
 public class If : IAst
 {
@@ -7,13 +9,14 @@ public class If : IAst
     public IAst Then;
     public IAst Else;
 
-    public void updateArgs(IAst[] args)
+    public void UpdateArgs(IEnumerable<IAst> args)
     {
         try
         {
-            Cond = args[0];
-            Then = args[1];
-            Else = args[2];
+            var a = args.ToArray();
+            Cond = a[0];
+            Then = a[1];
+            Else = a[2];
         }
         catch (System.IndexOutOfRangeException)
         {
