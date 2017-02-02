@@ -1,0 +1,1783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SteamVR_GazeTracker" Collapsed="true">
+    <Position X="11.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAACAAAAACBAEAABAAAAAQAAAAAAAAAAIAgAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_GazeTracker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_LaserPointer" Collapsed="true">
+    <Position X="15.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEQEAACECgAAAAAAAABAAAAAgAQCAAAAUIAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_LaserPointer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Teleporter" Collapsed="true">
+    <Position X="11.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAAgAAAAAAAAAAIAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_Teleporter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_TestThrow" Collapsed="true">
+    <Position X="15.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAIAAAAQICAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_TestThrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_TestTrackedCamera" Collapsed="true">
+    <Position X="17" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAoAAAAAAAAAAACAAIAAAAAABACAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_TestTrackedCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_TrackedController" Collapsed="true">
+    <Position X="20.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAACAAUiAhCIBIAQggAMEAEACDAAAAgAqgAAEAAAI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_TrackedController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAGEBABIQXAACEEABAaAMBIAEAFAAAQQAQAAIgAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SteamVR_Camera" Collapsed="true">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iQiIgAEAogAAAABAAAAAAAAAAAAIACAIAAAAAIQBCEc=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_CameraFlip" Collapsed="true">
+    <Position X="15.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_CameraFlip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_CameraMask" Collapsed="true">
+    <Position X="17" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_CameraMask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Controller" Collapsed="true">
+    <Position X="18.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_ControllerManager" Collapsed="true">
+    <Position X="20.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBVAQABIAAFAABAIAAAAAgAAAUAIAAAoAAAAAAAQiEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_ControllerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Ears" Collapsed="true">
+    <Position X="22.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAABAAAAAAAAAAAAAAIAAAEAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Ears.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Events" Collapsed="true">
+    <Position X="24" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SBAIACkAQIAAAgAAAChBhIAAAAoAAAMAAgEAQI0CAAI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Events.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_ExternalCamera" Collapsed="true">
+    <Position X="25.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKICBAAAAEgAAAAgIACAQAAAIAAIAAAIgACCEAAACAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_ExternalCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Fade" Collapsed="true">
+    <Position X="27.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAAEAAAACAAAAAAAAAAAAAIgAQBAAAIAACAAAQACAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Fade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Frustum" Collapsed="true">
+    <Position X="29.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAUACAAQAAAAAAAAAAAAAAAAAAAAAAEIiCAAAAABCAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Frustum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_GameView" Collapsed="true">
+    <Position X="10" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_GameView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_IK" Collapsed="true">
+    <Position X="13.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAACAAAAAAAgIAQAIAAKAICAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_IK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_LoadLevel" Collapsed="true">
+    <Position X="17" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IiQQAAEiAJoACxAAAAACAgoEAICIEAgggJCQIADEiBA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_LoadLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Menu" Collapsed="true">
+    <Position X="18.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAACQAAEAAUEAAggAABACAEAIAiAAAACAAiABJEk=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Overlay" Collapsed="true">
+    <Position X="20.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAAIAAAIAAAEAAQDgEDAEgAIAAASAAAACAE=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Overlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_PlayArea" Collapsed="true">
+    <Position X="22.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAgAIAAoAgAAAAIACAAAQAAAQACCAAACAAAAACgA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_PlayArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Render" Collapsed="true">
+    <Position X="24" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYVABAACEBAIgBIBAAQRAARwABIAWBIBAAIAAIASEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Render.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_RenderModel" Collapsed="true">
+    <Position X="25.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AA0AgAAhCCCgAAIAgAwAAoBAAAAQADAIKAABAERJCMI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_RenderModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Skybox" Collapsed="true">
+    <Position X="27.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAABAAABAAAAAQAAgAAAAKAAAIgBAAAAAgiAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Skybox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_SphericalProjection" Collapsed="true">
+    <Position X="29.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_SphericalProjection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Stats" Collapsed="true">
+    <Position X="10" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAAAAAAAAAAAAgAAAAAEAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_TestController" Collapsed="true">
+    <Position X="13.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUgAQCAAAACAAAAAAAAAAIAAAAAAAAIAAAAAAAACQA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_TestController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_TrackedCamera" Collapsed="true">
+    <Position X="18.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAgAAAAIAgAAAAIAAAAAIAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_TrackedCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_TrackedObject" Collapsed="true">
+    <Position X="22.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABAAAAAEAACAAAAAAAAAAAAAAAAAAIAAAAAAABCEI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_TrackedObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_UpdatePoses" Collapsed="true">
+    <Position X="24" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_UpdatePoses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamVR_Utils" Collapsed="true">
+    <Position X="25.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAICACCAAEAAgAAAACAAAAAAAAAAoIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Scripts\SteamVR_Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CatchNode" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAIAAAASACAAAAAIAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Script\CatchNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConstNodeChoice" Collapsed="true">
+    <Position X="18.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIACCAAAAAAAAAIBAAAAAAAAAQAAABAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\ConstNodeChoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMonad" Collapsed="true">
+    <Position X="22.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\someting\IMonad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VIVEController" Collapsed="true">
+    <Position X="27.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAA=</HashCode>
+      <FileName>Assets\Script\VIVEController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.BodyCollider" Collapsed="true">
+    <Position X="29.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAggAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\BodyCollider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.CircularDrive" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GECCACIgAKAgCBIgAGIGAQJBBCRA0AMKkGCCAkABEBI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\CircularDrive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ComplexThrowable" Collapsed="true">
+    <Position X="15.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACgABgAAAAAAAAgAAQQAAAGAEAAAAogAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\ComplexThrowable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ControllerHoverHighlight" Collapsed="true">
+    <Position X="24" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAAACAAAEAgAEAAgAAAiIAAAABKAYAARAAACEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\ControllerHoverHighlight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.CustomEvents" Collapsed="true">
+    <Position X="25.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\CustomEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.DebugUI" Collapsed="true">
+    <Position X="29.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAAAAAAAAAAAAAAABAAAABAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\DebugUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.DestroyOnDetachedFromHand" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\DestroyOnDetachedFromHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.DestroyOnParticleSystemDeath" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\DestroyOnParticleSystemDeath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.DestroyOnTriggerEnter" Collapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAgAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\DestroyOnTriggerEnter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.DistanceHaptics" Collapsed="true">
+    <Position X="15.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAhAACAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\DistanceHaptics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.DontDestroyOnLoad" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\DontDestroyOnLoad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.EnumFlags" Collapsed="true">
+    <Position X="18.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\EnumFlags.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.EnumFlagsPropertyDrawer" Collapsed="true">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\EnumFlags.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.FallbackCameraController" Collapsed="true">
+    <Position X="25.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAQAAAAAAAAAAAAAAAAAAAQAAAACAAAAKDAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\FallbackCameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Hand" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>jAcFAAhAMiEAQUEISQoAIABBEASJSgAqCYEAARCSGEI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\Hand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.HandEditor" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\Hand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.HapticRack" Collapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAgAAACAQAAAAAgEAIACAACAAAIAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\HapticRack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.HideOnHandFocusLost" Collapsed="true">
+    <Position X="15.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\HideOnHandFocusLost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.IgnoreHovering" Collapsed="true">
+    <Position X="18.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\IgnoreHovering.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.InputModule" Collapsed="true">
+    <Position X="24" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAAAAAAAAAAAAkAAQAAAAABAAIAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\InputModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Interactable" Collapsed="true">
+    <Position X="25.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAACAAAAAAAIAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\Interactable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.InteractableButtonEvents" Collapsed="true">
+    <Position X="27.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAEAAAAQAAAAAAAAAAAKAIAAgAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\InteractableButtonEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.InteractableHoverEvents" Collapsed="true">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAAAAAAACAAAAAAQIAAAAAEAAAAAAAAAEBAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\InteractableHoverEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ItemPackage" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAFAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\ItemPackage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ItemPackageReference" Collapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\ItemPackageReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ItemPackageSpawner" Collapsed="true">
+    <Position X="15.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgkAAAIDAEAAAAgQhAQQAAhSggMAgAAAAEggUAQAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\ItemPackageSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ItemPackageSpawnerEditor" Collapsed="true">
+    <Position X="17" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\ItemPackageSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.LinearAnimation" Collapsed="true">
+    <Position X="18.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAEAAAAAACAIAAAAAAAAAAAAAAAAAAAkA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\LinearAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.LinearAnimator" Collapsed="true">
+    <Position X="20.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBQAAAEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\LinearAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.LinearAudioPitch" Collapsed="true">
+    <Position X="22.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAAAAAAACAAAAAAAAEAAAEAAQAAAQCEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\LinearAudioPitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.LinearBlendshape" Collapsed="true">
+    <Position X="24" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAAAEE=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\LinearBlendshape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.LinearDisplacement" Collapsed="true">
+    <Position X="25.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACAAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\LinearDisplacement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.LinearDrive" Collapsed="true">
+    <Position X="27.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBQAAAAAACAABFAABAACAAAAAAAAEAACAAAEAAABAcA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\LinearDrive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.LinearMapping" Collapsed="true">
+    <Position X="29.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\LinearMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Player" Collapsed="true">
+    <Position X="15.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAoAEAQQAgCAAIAMBAEAiABAIAAQAABAQAAECEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.PlaySound" Collapsed="true">
+    <Position X="17" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECIAAAAKBSACUAAACAKIAIAAUAAEAAioAAigAAAAkA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\PlaySound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.SeeThru" Collapsed="true">
+    <Position X="18.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAAAAAQAgBAAAAQAAAAAIAACIAIAAAAAACEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\SeeThru.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.SleepOnAwake" Collapsed="true">
+    <Position X="20.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\SleepOnAwake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.SoundDeparent" Collapsed="true">
+    <Position X="24" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAQQAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\SoundDeparent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.SoundPlayOneshot" Collapsed="true">
+    <Position X="25.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAACAAAAAAKIAAAAEAAAAAAgABQAAAEAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\SoundPlayOneshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.SpawnAndAttachAfterControllerIsTracking" Collapsed="true">
+    <Position X="27.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAgAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\SpawnAndAttachAfterControllerIsTracking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.SpawnAndAttachToHand" Collapsed="true">
+    <Position X="29.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAIAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\SpawnAndAttachToHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.SpawnRenderModel" Collapsed="true">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAACAAAAAAAAAgAAAEAAJACAAAAAAKAAAABAFAiEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\SpawnRenderModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Throwable" Collapsed="true">
+    <Position X="13.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAEAAAAAAAAYQAgAgAQwIANggCEAAEBQgAAAkAQEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\Throwable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.UIElement" Collapsed="true">
+    <Position X="15.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAQAAAAAAEAIAAAAAAAAAIEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\UIElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.UIElementEditor" Collapsed="true">
+    <Position X="17" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\UIElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Unparent" Collapsed="true">
+    <Position X="18.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAIAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\Unparent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Util" Collapsed="true">
+    <Position X="20.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAgbAAAVAAAMAAJGMCACaFRAgAxAIgEAAAAHJgAk0w=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\Util.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.AfterTimer_Component" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARBAAAAAIAAAAAAAAAQAAAAAAQAAAAAAAASAAAABAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\Util.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.VelocityEstimator" Collapsed="true">
+    <Position X="25.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABgAAQAAAAkAAAAAAAggAAAQCCAAAAgAAAAAAAUA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Core\Scripts\VelocityEstimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ControllerButtonHints" Collapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAgQAAADAIGEAOAJBkoAIACAAACARPQCCQJwBAiEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Hints\Scripts\ControllerButtonHints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ArcheryTarget" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgBAQAAAAAAAAAAAgAAAAEAFAAAAAAAAAAAIgQEAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\ArcheryTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Arrow" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgFEAQAAiARABAAKABAAACAAQQADAAIAAIAAAAAgAE=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\Arrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ArrowHand" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AsggwAIADAAAAYAoQAAAAoIAgAAAAAAEAjAQCAEAQEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\ArrowHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ArrowheadRotation" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\ArrowheadRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Balloon" Collapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAQiIAAAAgIABAAAEUAEAAAhRIARgAgABAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\Balloon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.BalloonColliders" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAABAAAAAAAAAAAFAAAAAAAAAAAAAAAIAAAAEAAACEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\BalloonColliders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.BalloonHapticBump" Collapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\BalloonHapticBump.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.BalloonSpawner" Collapsed="true">
+    <Position X="27.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAEgAACAAAAAFACAAAAECABAAAASAAFAIAYAAAgA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\BalloonSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ExplosionWobble" Collapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\ExplosionWobble.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.FireSource" Collapsed="true">
+    <Position X="27.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQAACAAACAgAAAAAAAIFAQAABAAQAIQAIAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\FireSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Longbow" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAy7aAAgqRACo7IrICAIYQOAASQIIhQsQAAAQQMAiEQ=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\Longbow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.SoundBowClick" Collapsed="true">
+    <Position X="22.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAEAAAABEAAQAAAQAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Longbow\Scripts\SoundBowClick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ControllerHintsExample" Collapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAACAQ=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Samples\Scripts\ControllerHintsExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.InteractableExample" Collapsed="true">
+    <Position X="29.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAgCAQIAAAgAEABFAAAAAAEAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Samples\Scripts\InteractableExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.AllowTeleportWhileAttachedToHand" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\AllowTeleportWhileAttachedToHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.ChaperoneInfo" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEEAAAgDIAAAAAAAAAAAAAAABAAAAAAAAAEEAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\ChaperoneInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.IgnoreTeleportTrace" Collapsed="true">
+    <Position X="20.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\IgnoreTeleportTrace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.Teleport" Collapsed="true">
+    <Position X="27.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EV3sgqCANnKQIlSQhUFAARnZOgBIZHvJBUBgCZECD/I=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\Teleport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.TeleportArc" Collapsed="true">
+    <Position X="29.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAEAAGBEIQAAEAAAIIIgAjBEgAABgAgAAIBAAwI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\TeleportArc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.TeleportArea" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAgEAACAAAAAAAQBAAAAAAAAAQEAACAAAACRQAUI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\TeleportArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.TeleportAreaEditor" Collapsed="true">
+    <Position X="10" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\TeleportArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.TeleportMarkerBase" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAgAAIAAAAAAAAAAAAAAIQEBAAAEAACAQAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\TeleportMarkerBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.TeleportPoint" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACSAogEAwCBAEAwIQAAQAIAWAAAASEgDAKMIACAQgEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\TeleportPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.InteractionSystem.TeleportPointEditor" Collapsed="true">
+    <Position X="11.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\InteractionSystem\Teleport\Scripts\TeleportPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRSystem" Collapsed="true">
+    <Position X="25.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAQABgABgACIAAAAhEmABMAECsjxOCARGABEAU=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRExtendedDisplay" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAEAAIAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRTrackedCamera" Collapsed="true">
+    <Position X="27.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAQAAAAAAEQAABAAAAACAgAAAAAEAAACEQAAQA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRApplications" Collapsed="true">
+    <Position X="27.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAIYBQACCAQAACwAAQAgCAjAAQEgAIMAAIASAUA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRChaperone" Collapsed="true">
+    <Position X="29.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAUAAAAAAAAAACAAAAAJgAAAAEIAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRChaperoneSetup" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAEgAAQAAAAAICEAAgQAAIKEAgEMAAAAAAAAAgAgAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRCompositor" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAASAAADCIYIAQIMBAQKIAGAAAkCqOQAIQAJIgg=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVROverlay" Collapsed="true">
+    <Position X="17" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A5VgAJB5ZgAiIVsgQQAcGgIZwCBtAhpAtESAJMEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRRenderModels" Collapsed="true">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggQAAQACAAAAAQBEAAJAAAAAAAAAAAACTkBAAIAAg=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRNotifications" Collapsed="true">
+    <Position X="15.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRSettings" Collapsed="true">
+    <Position X="24" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAgQACAAAgCBAEAgBAAAAAAAAAgQAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRScreenshots" Collapsed="true">
+    <Position X="22.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAABAAAAYCAAIAAEAAAACA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.CVRResources" Collapsed="true">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.OpenVRInterop" Collapsed="true">
+    <Position X="13.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQAAAEQAAAAAAAAAAAAAAAABABAAAAAAACIAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Valve.VR.OpenVR" Collapsed="true">
+    <Position X="11.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>B6E0YmoccNq1JYIdmHx3PaNKFhcvJYWUt7ICfwuOtVg=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="GazeEventArgs" Collapsed="true">
+    <Position X="24" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_GazeTracker.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PointerEventArgs" Collapsed="true">
+    <Position X="10" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAIAAAAAAAAEAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_LaserPointer.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ClickedEventArgs" Collapsed="true">
+    <Position X="13.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_TrackedController.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRSystem" Collapsed="true">
+    <Position X="25.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAABgABgACIAAAAhEmABMAECsjxOCARGABEAU=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRExtendedDisplay" Collapsed="true">
+    <Position X="13.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRTrackedCamera" Collapsed="true">
+    <Position X="27.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAEQAABAAAAACAgAAAAAEAAACEQAAQA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRApplications" Collapsed="true">
+    <Position X="27.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAIIBQACCAQAACwAAQAgCAjAAQEgAIMAAIASAUA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRChaperone" Collapsed="true">
+    <Position X="29.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAACAAAAAJgAAAAEIAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRChaperoneSetup" Collapsed="true">
+    <Position X="10" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAEgAAAAAAAAICEAAgQAAIKEAgEMAAAAAAAAAgAgAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRCompositor" Collapsed="true">
+    <Position X="11.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAACAAADCIYIAQIMBAQKIAGAAAkCqOQAIQAJIgg=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVROverlay" Collapsed="true">
+    <Position X="17" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A5VgAJBpZgAiIVsgQQAcGgIZwCBtAhpAtESAJMEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRRenderModels" Collapsed="true">
+    <Position X="18.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggQAAAACAAAAAQBEAAJAAAAAAAAAAAACTkBAAIAAg=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRNotifications" Collapsed="true">
+    <Position X="15.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRSettings" Collapsed="true">
+    <Position X="24" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAgAACAAAgCBAEAgBAAAAAAAAAgQAAEAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRScreenshots" Collapsed="true">
+    <Position X="22.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAYCAAIAAEAAAACA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IVRResources" Collapsed="true">
+    <Position X="20.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Data_t" Collapsed="true">
+    <Position X="11.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQpAAAYAAAAAAEICCCAAFJAAAAAACAAAAAgAAACAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VROverlayIntersectionMaskPrimitive_Data_t" Collapsed="true">
+    <Position X="22.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdMatrix34_t" Collapsed="true">
+    <Position X="29.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAACAAAAAAAAAAAAAAkEgEAAAgAAQAAAAQAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdMatrix44_t" Collapsed="true">
+    <Position X="10" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAACAAAAAAAAAAAAAAkEgEAAAgAAQAAAAQAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdVector3_t" Collapsed="true">
+    <Position X="18.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdVector4_t" Collapsed="true">
+    <Position X="22.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdVector3d_t" Collapsed="true">
+    <Position X="20.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdVector2_t" Collapsed="true">
+    <Position X="17" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdQuaternion_t" Collapsed="true">
+    <Position X="13.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgAQAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdColor_t" Collapsed="true">
+    <Position X="27.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQABAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdQuad_t" Collapsed="true">
+    <Position X="11.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HmdRect2_t" Collapsed="true">
+    <Position X="15.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.DistortionCoordinates_t" Collapsed="true">
+    <Position X="22.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAAAAAAEAAAAAAAAAAAAAACAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.Texture_t" Collapsed="true">
+    <Position X="20.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.TrackedDevicePose_t" Collapsed="true">
+    <Position X="22.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABQAAAAAAAAAAAAAAAAAAAAAABAAABAEAAAAgAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VRTextureBounds_t" Collapsed="true">
+    <Position X="29.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQBAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VRVulkanTextureData_t" Collapsed="true">
+    <Position X="10" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAIAAABAAAAEAIEAAAAAAAIAQAAAAAAAAEQ=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Controller_t" Collapsed="true">
+    <Position X="10" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Mouse_t" Collapsed="true">
+    <Position X="20.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Scroll_t" Collapsed="true">
+    <Position X="13.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_TouchPadMove_t" Collapsed="true">
+    <Position X="20.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAgABAAAAAAIAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Notification_t" Collapsed="true">
+    <Position X="22.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Process_t" Collapsed="true">
+    <Position X="27.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Overlay_t" Collapsed="true">
+    <Position X="24" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Status_t" Collapsed="true">
+    <Position X="17" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Keyboard_t" Collapsed="true">
+    <Position X="17" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAA+AeAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Ipd_t" Collapsed="true">
+    <Position X="15.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Chaperone_t" Collapsed="true">
+    <Position X="29.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Reserved_t" Collapsed="true">
+    <Position X="29.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_PerformanceTest_t" Collapsed="true">
+    <Position X="25.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_SeatedZeroPoseReset_t" Collapsed="true">
+    <Position X="15.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_Screenshot_t" Collapsed="true">
+    <Position X="10" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_ScreenshotProgress_t" Collapsed="true">
+    <Position X="11.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_ApplicationLaunch_t" Collapsed="true">
+    <Position X="27.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_EditingCameraSurface_t" Collapsed="true">
+    <Position X="13.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_MessageOverlay_t" Collapsed="true">
+    <Position X="18.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VREvent_t" Collapsed="true">
+    <Position X="18.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.HiddenAreaMesh_t" Collapsed="true">
+    <Position X="25.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VRControllerAxis_t" Collapsed="true">
+    <Position X="24" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VRControllerState_t" Collapsed="true">
+    <Position X="25.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAQAAAAAAAAAAAAAEAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.Compositor_OverlaySettings" Collapsed="true">
+    <Position X="18.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAIBIAAAAACAkDEAAgAAAAQAAIAAQA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.CameraVideoStreamFrameHeader_t" Collapsed="true">
+    <Position X="11.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAQAAAAAAAABAAAAQAAAABAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.AppOverrideKeys_t" Collapsed="true">
+    <Position X="10" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.Compositor_FrameTiming" Collapsed="true">
+    <Position X="17" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBAAQAAAAIAAIFhAhQQAQAACEFAAAAAAQBgIAAAQAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.Compositor_CumulativeStats" Collapsed="true">
+    <Position X="15.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAQAAAQAEBIAAAAAAAAABAEAAAAUQAAAAQAAAAMA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VROverlayIntersectionParams_t" Collapsed="true">
+    <Position X="25.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAEAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VROverlayIntersectionResults_t" Collapsed="true">
+    <Position X="27.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IntersectionMaskRectangle_t" Collapsed="true">
+    <Position X="25.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.IntersectionMaskCircle_t" Collapsed="true">
+    <Position X="24" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.VROverlayIntersectionMaskPrimitive_t" Collapsed="true">
+    <Position X="24" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.RenderModel_ComponentState_t" Collapsed="true">
+    <Position X="11.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAACAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.RenderModel_Vertex_t" Collapsed="true">
+    <Position X="18.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.RenderModel_TextureMap_t" Collapsed="true">
+    <Position X="17" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAABAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.RenderModel_t" Collapsed="true">
+    <Position X="15.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAgABAAAEAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.RenderModel_ControllerMode_State_t" Collapsed="true">
+    <Position X="13.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.NotificationBitmap_t" Collapsed="true">
+    <Position X="29.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAgAgAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Valve.VR.COpenVRContext" Collapsed="true">
+    <Position X="20.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAABAAAAIAIAAAAAAAAEAAEAAAAAAIASAAAAAAAUA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="ICatchable" Collapsed="true">
+    <Position X="11.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\someting\ICatchable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IFunctor&lt;A, B, FB&gt;" Collapsed="true">
+    <Position X="13.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\someting\IFunctor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Valve.VR.EVREye" Collapsed="true">
+    <Position X="15.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ETextureType" Collapsed="true">
+    <Position X="27.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EColorSpace" Collapsed="true">
+    <Position X="17" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAACABAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ETrackingResult" Collapsed="true">
+    <Position X="15.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAACAAAAAAAAAAAAAAAAAAAAkAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ETrackedDeviceClass" Collapsed="true">
+    <Position X="10" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAEQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ETrackedControllerRole" Collapsed="true">
+    <Position X="29.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAEAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ETrackingUniverseOrigin" Collapsed="true">
+    <Position X="17" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ETrackedDeviceProperty" Collapsed="true">
+    <Position X="11.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AokRrWQVAIrWBRwcAJQkA0EYIoiX4AIxbQiMAU0w8AQ=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ETrackedPropertyError" Collapsed="true">
+    <Position X="13.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAEAAARAAJAAAAAAQgABAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRSubmitFlags" Collapsed="true">
+    <Position X="20.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRState" Collapsed="true">
+    <Position X="18.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBAAAAAACkAAAQAAAAAAAAAAAAAAAAAACAAACA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVREventType" Collapsed="true">
+    <Position X="13.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCIkoFCYEWBBNgHDAQELET4AwxyRSNARSlBJUQEVPxU=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EDeviceActivityLevel" Collapsed="true">
+    <Position X="18.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAIAAAAAAAAEIAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRButtonId" Collapsed="true">
+    <Position X="25.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAEQAAAQggAgAAAAAAAhAAACQCgAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRMouseButton" Collapsed="true">
+    <Position X="20.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACQAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EHiddenAreaMeshType" Collapsed="true">
+    <Position X="24" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRControllerAxisType" Collapsed="true">
+    <Position X="10" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAACAAABAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRControllerEventOutputType" Collapsed="true">
+    <Position X="11.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ECollisionBoundsStyle" Collapsed="true">
+    <Position X="15.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgQAAAAAAAEIAAAAAAAAAAAAAKAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVROverlayError" Collapsed="true">
+    <Position X="27.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgIAQAEAACAQBAAAAQAAABGQBQAAAIAAAAAAAEABQM=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRApplicationType" Collapsed="true">
+    <Position X="24" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAIAAAAAAMAEQAAAAEAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRFirmwareError" Collapsed="true">
+    <Position X="17" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRNotificationError" Collapsed="true">
+    <Position X="22.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMEAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRInitError" Collapsed="true">
+    <Position X="18.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAGayIEEiDQgAmBAJAmNIKWADqYE0FBgEBBERBEBWBo=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRScreenshotType" Collapsed="true">
+    <Position X="15.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAQEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRScreenshotPropertyFilenames" Collapsed="true">
+    <Position X="13.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRTrackedCameraError" Collapsed="true">
+    <Position X="22.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACIAAAACEAAAAAAAQAAAEACACAQgAAAAABAAgEAgAM=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRTrackedCameraFrameType" Collapsed="true">
+    <Position X="24" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRApplicationError" Collapsed="true">
+    <Position X="18.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEIBqQAAAQAACABFAAAACkAACAAAAIAAEAAAEAgAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRApplicationProperty" Collapsed="true">
+    <Position X="20.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAEAAAAiAAAACAEAQAAAAIIAAAAAgAAABAYg=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRApplicationTransitionState" Collapsed="true">
+    <Position X="22.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAACAAAAAAAIAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.ChaperoneCalibrationState" Collapsed="true">
+    <Position X="10" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAgAAAEAAQAAABAAABAAAAAAAIAAAAABAAAAAEA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EChaperoneConfigFile" Collapsed="true">
+    <Position X="11.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EChaperoneImportFlags" Collapsed="true">
+    <Position X="13.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRCompositorError" Collapsed="true">
+    <Position X="29.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAAAAAAhAAAAAEAAAAAACAYAEAAAAAAAAAEAQAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.VROverlayInputMethod" Collapsed="true">
+    <Position X="29.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.VROverlayTransformType" Collapsed="true">
+    <Position X="10" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.VROverlayFlags" Collapsed="true">
+    <Position X="27.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQhAAAQBAEQAAAAACAAAAkAQIAAAAAAAgFAAAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.VRMessageOverlayResponse" Collapsed="true">
+    <Position X="25.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAIAHAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EGamepadTextInputMode" Collapsed="true">
+    <Position X="22.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EGamepadTextInputLineMode" Collapsed="true">
+    <Position X="20.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EOverlayDirection" Collapsed="true">
+    <Position X="25.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVROverlayIntersectionMaskPrimitiveType" Collapsed="true">
+    <Position X="29.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRRenderModelError" Collapsed="true">
+    <Position X="10" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAYAAAAEAAAAACIAAAAAI6AAAAAAAAAAAEBAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRComponentProperty" Collapsed="true">
+    <Position X="27.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAIAAAAgAAAAAAAAAAAgAg=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRNotificationType" Collapsed="true">
+    <Position X="25.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRNotificationStyle" Collapsed="true">
+    <Position X="24" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAQAAEAAAAAEAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRSettingsError" Collapsed="true">
+    <Position X="17" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAABAAgAEAAAAAAIAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Valve.VR.EVRScreenshotError" Collapsed="true">
+    <Position X="11.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAgAAAAAAAAAACAAAQAAAAAAQAAAAEAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Plugins\openvr_api.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="GazeEventHandler" Collapsed="true">
+    <Position X="11.75" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_GazeTracker.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="PointerEventHandler" Collapsed="true">
+    <Position X="13.5" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_LaserPointer.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="ClickedEventHandler" Collapsed="true">
+    <Position X="10" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Lib\SteamVR\Extras\SteamVR_TrackedController.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>

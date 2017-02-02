@@ -22,6 +22,7 @@ public class CatchNode : MonoBehaviour
 		if (joint == null && Target != null && device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger))
 		{
 			Target.transform.position = attachPoint.transform.position;
+            Target.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
 			joint = Target.AddComponent<FixedJoint>();
 			joint.connectedBody = attachPoint;
@@ -57,7 +58,7 @@ public class CatchNode : MonoBehaviour
 
     void OnTriggerEnter(Collider collider) {
         Debug.Log("Trigger Enter " + collider.gameObject.ToString());
-        if (collider.gameObject.tag == "Node") {
+        if (collider.gameObject.GetComponent<ICatchable>() != null) {
             Target = collider.gameObject;
         }
     }

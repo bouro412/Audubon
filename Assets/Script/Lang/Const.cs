@@ -3,39 +3,36 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
-public class Const : IAst
-{
-    AudubonValue audubonValue { get; set; }
+namespace Audubon {
+    public class Const : IAst {
+        Value audubonValue { get; set; }
 
-    public string information()
-    {
-        return audubonValue.information();
-    }
+        public string information() {
+            return audubonValue.information();
+        }
 
-    public AudubonValue eval(AudubonEnv env)
-    {
-        return audubonValue;
-    }
+        public Value eval(Env env) {
+            return audubonValue;
+        }
 
-    public void UpdateArgs(IEnumerable<IAst> args)
-    {
-        throw new NotImplementedException();
-    }
+        public void UpdateArgs(IEnumerable<IAst> args) {
+            throw new NotImplementedException();
+        }
 
-    public Const()
-    {
-
-    }
-    public Const(bool value)
-    {
-        audubonValue = new AudubonBool(value);
-    }
-    public Const(int value)
-    {
-        audubonValue = new AudubonInt(value);
-    }
-    public Const(float value)
-    {
-        audubonValue = new AudubonFloat(value);
+        public Const() {
+            audubonValue = new Nil();
+        }
+        public Const(Value val) {
+            audubonValue = val;
+        }
+        public Const(bool value) {
+            audubonValue = new Bool(value);
+        }
+        public Const(int value) {
+            audubonValue = new Int(value);
+        }
+        public Const(float value) {
+            audubonValue = new Float(value);
+        }
     }
 }

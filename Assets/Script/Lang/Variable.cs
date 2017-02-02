@@ -3,28 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Variable : IAst
-{
-    public string VarName;
+namespace Audubon {
+    public class Variable : IAst {
+        public string VarName;
 
-    public string information()
-    {
-        return VarName;
+        public string information() {
+            return VarName;
+        }
+
+        public Value eval(Env env) {
+            return env.apply(VarName);
+        }
+
+        public void UpdateArgs(IEnumerable<IAst> args) {
+            throw new NotImplementedException();
+        }
+
+        public Variable(string name) {
+            VarName = name;
+        }
+
     }
-
-    public AudubonValue eval(AudubonEnv env)
-    {
-        return env.apply(VarName);
-    }
-
-    public void UpdateArgs(IEnumerable<IAst> args)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Variable(string name)
-    {
-        VarName = name;
-    }
-
 }
