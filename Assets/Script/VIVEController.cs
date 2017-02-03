@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
 /// 移動
 /// </summary>
-public class VIVEController : MonoBehaviour {
+public class VIVEController : MonoBehaviour{
 
     public GameObject CameraRig;
     public GameObject CameraEye;
@@ -58,4 +59,5 @@ public class VIVEController : MonoBehaviour {
             Menu.GetComponent<IMenu>().Update(Controller);
         }
     }
+   
 }

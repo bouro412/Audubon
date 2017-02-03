@@ -57,13 +57,11 @@ public class CatchNode : MonoBehaviour
 	}
 
     void OnTriggerEnter(Collider collider) {
-        Debug.Log("Trigger Enter " + collider.gameObject.ToString());
         if (collider.gameObject.GetComponent<ICatchable>() != null) {
             Target = collider.gameObject;
         }
     }
     void OnTriggerExit(Collider collider) {
-        Debug.Log("Trigger Exit " + collider.gameObject.ToString());
         if (collider.gameObject == Target) {
             Target = null;
         }

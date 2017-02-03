@@ -5,4 +5,5 @@ using UnityEngine;
 public interface IMenu{
 
     void Update(SteamVR_TrackedObject controller);
+    bool isMenuClose();
 }

@@ -58,7 +58,6 @@ namespace Audubon {
                 info = this.GetComponentInChildren<TextMesh>();
             }
             info.text = expression.information();
-            Debug.Log(expression);
         }
         public virtual Value eval(Env env) {
             return expression.eval(env);
