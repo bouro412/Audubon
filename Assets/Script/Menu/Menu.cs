@@ -31,14 +31,16 @@ public class Menu : MonoBehaviour, IMenu{
 	}
 
     void IMenu.Update(SteamVR_TrackedObject controller) {
-        Debug.Log("null? : " + (nextMenu == null) + ", not null? : " + (nextMenu != null));
         if (nextMenu != null) {
+            gameObject.GetComponent<Canvas>().enabled = false;
             nextMenu.Update(controller);
             if (nextMenu.isMenuClose()) {
                 nextMenu = null;
                 DestroyImmediate(menuObject);
             }
             return;
+        }else {
+            gameObject.GetComponent<Canvas>().enabled = true;
         }
         var device = SteamVR_Controller.Input((int)controller.index);
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
@@ -60,6 +62,9 @@ public class Menu : MonoBehaviour, IMenu{
             menuObject = Instantiate(MenuPrehabs[index], transform.parent, false);
             nextMenu = menuObject.GetComponent<IMenu>();
             Debug.Log(types[index] + " menu created");
+        }
+        if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu)) {
+            isClose = true;
         }
     }
     bool IMenu.isMenuClose() {

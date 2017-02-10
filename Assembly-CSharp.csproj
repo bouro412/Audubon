@@ -159,6 +159,8 @@
      <Compile Include="Assets\Script\Lang\If.cs" />
      <Compile Include="Assets\Script\Lang\Value.cs" />
      <Compile Include="Assets\Script\Lang\Variable.cs" />
+     <Compile Include="Assets\Script\Menu\BoolMenu.cs" />
+     <Compile Include="Assets\Script\Menu\FloatMenu.cs" />
      <Compile Include="Assets\Script\Menu\IControllable.cs" />
      <Compile Include="Assets\Script\Menu\IMenu.cs" />
      <Compile Include="Assets\Script\Menu\IntMenu.cs" />

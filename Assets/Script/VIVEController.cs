@@ -25,7 +25,12 @@ public class VIVEController : MonoBehaviour{
     // Update is called once per frame
     void Update() {
         if (Menu != null) {
-            MenuControll();
+            var m = Menu.GetComponent<IMenu>();
+            m.Update(Controller);
+            if (m.isMenuClose()) {
+                DestroyImmediate(Menu);
+                Menu = null;
+            }
             return;
         }
         if (device.GetPress(SteamVR_Controller.ButtonMask.Touchpad)) {
@@ -48,16 +53,4 @@ public class VIVEController : MonoBehaviour{
             Menu = Instantiate(MenuPrehab, transform, false);
         }
     }
-
-
-
-    void MenuControll() {
-        if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu)) {
-            DestroyImmediate(Menu);
-            Menu = null;
-        } else {
-            Menu.GetComponent<IMenu>().Update(Controller);
-        }
-    }
-   
 }
