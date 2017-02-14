@@ -34,7 +34,7 @@ public class BoolMenu : MonoBehaviour, IMenu {
             NumberText.text = currentValue.ToString();
         }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger)) {
-            var node = Instantiate(NodePrehab, transform.position, Quaternion.identity);
+            var node = Instantiate(NodePrehab, transform.position, Quaternion.Euler(0, 180, 0));
             node.GetComponent<Audubon.ExpNode>().expression = new Audubon.Const((bool)currentValue);
             isClose = true;
         }
