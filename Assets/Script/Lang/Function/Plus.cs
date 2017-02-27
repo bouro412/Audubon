@@ -1,15 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace Audubon {
-    public class Plus : Function {
-
+    public class Plus : IFunction {
+        IAst[] args;
         void Start() {
-            FunctionName = "+";
-            _argNum = 2;
+            args = new IAst[2];
         }
-        protected override Value run(Value[] values) {
+        
+        int IFunction.getArgNum() {
+            return 2;
+        }
+
+        string IAst.information() {
+            return "+";
+        }
+
+        Value IAst.eval(Env env) {
+            var values = args.Select(a => a.eval(env)).ToArray();
             int? ai = values[0].getInt();
             int? bi = values[1].getInt();
             float? af = values[0].getFloat();
@@ -19,6 +30,14 @@ namespace Audubon {
             } else {
                 return new Float((float)((ai ?? af) + (bi ?? bf)));
             }
+        }
+
+        void IAst.UpdateArgs(IEnumerable<IAst> args) {
+            this.args = args.ToArray();
+        }
+
+        IEnumerable<IAst> IFunction.getArgs() {
+            return args;
         }
     }
 }

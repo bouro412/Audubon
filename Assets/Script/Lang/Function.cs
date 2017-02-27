@@ -5,16 +5,21 @@ using System.Linq;
 using System;
 
 namespace Audubon {
-    public class Function : IAst {
+    /*
+    public abstract class Function : IAst {
         [SerializeField]
         protected IAst[] args;
         protected string FunctionName;
 
-        protected int _argNum = 0;
+        protected int _argNum = 0; 
 
 
         protected bool isCorrectArg() {
             return _argNum == args.Length;
+        }
+
+        public virtual int getArgNum() {
+            return _argNum;
         }
 
         public Value eval(Env env) {
@@ -37,6 +42,13 @@ namespace Audubon {
         public string information() {
             return FunctionName;
         }
+
+    }
+    */
+    // 試しにinterfaceにしてみる
+    public interface IFunction: IAst{
+         int getArgNum();
+         IEnumerable<IAst> getArgs();
 
     }
 }

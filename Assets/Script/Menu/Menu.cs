@@ -20,15 +20,6 @@ public class Menu : MonoBehaviour, IMenu{
         Top = 0,
         
     }
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void IMenu.Update(SteamVR_TrackedObject controller) {
         if (nextMenu != null) {
@@ -54,11 +45,6 @@ public class Menu : MonoBehaviour, IMenu{
             GetComponentInChildren<Text>().text = types[index];
         }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger)) {
-            /*
-            var node = Instantiate(NodePrehab, transform.position, Quaternion.identity);
-            node.GetComponent<Audubon.ExpNode>().expression = vals[index];
-            Debug.Log(vals[index].information());
-            */
             menuObject = Instantiate(MenuPrehabs[index], transform.parent, false);
             nextMenu = menuObject.GetComponent<IMenu>();
             Debug.Log(types[index] + " menu created");

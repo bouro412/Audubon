@@ -22,14 +22,14 @@ namespace Audubon {
             }
             argsCache = new List<IAst>(args);
             if(expression == null )expression = new Const();
+            if(expression is IFunction) {
+                
+            }
         }
 
         // Update is called once per frame
         protected void Update() {
             displayInformation();
-            if (hasValue()) {
-                GetComponent<MeshRenderer>().material.color = Color.blue;
-            }
             if (isEdited()) {
                 expression.UpdateArgs(args);
             }
@@ -43,16 +43,6 @@ namespace Audubon {
             }
             return false;
         }
-
-        public virtual bool hasValue() {
-            return LangValue != null;
-        }
-
-
-        void run() {
-
-        }
-
         void displayInformation() {
             if (info == null) {
                 info = this.GetComponentInChildren<TextMesh>();
