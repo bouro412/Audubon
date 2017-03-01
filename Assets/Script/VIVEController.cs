@@ -18,7 +18,7 @@ public class VIVEController : MonoBehaviour{
     // Drag Node
     GameObject Target; // 掴む対象
     Rigidbody attachPoint; // コントローラーのRigidBody
-    FixedJoint joint; // コントローラーとオブジェクトを結合するJoint
+    HingeJoint joint; // コントローラーとオブジェクトを結合するJoint
 
     enum State {
         Normal,
@@ -71,7 +71,7 @@ public class VIVEController : MonoBehaviour{
             Target.transform.position = attachPoint.transform.position;
             Target.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-            joint = Target.AddComponent<FixedJoint>();
+            joint = Target.AddComponent<HingeJoint>();
             joint.connectedBody = attachPoint;
             state = State.Drag;
         }
