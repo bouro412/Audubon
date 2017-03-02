@@ -8,6 +8,5 @@ namespace Audubon {
     public interface IAst {
         string information();
         Value eval(Env env);
-        void UpdateArgs(IEnumerable<IAst> ast);
     }
 }

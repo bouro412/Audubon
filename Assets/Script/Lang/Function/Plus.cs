@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System;
-using System.Collections.Generic;
 
 namespace Audubon {
     public class Plus : IFunction {
-        IAst[] args;
+        Dictionary<string, IAst> args;
         void Start() {
-            args = new IAst[2];
+            args = new Dictionary<string, IAst>();
+            args.Add("x", null);
+            args.Add("y", null);
         }
         
         int IFunction.getArgNum() {
@@ -20,7 +21,7 @@ namespace Audubon {
         }
 
         Value IAst.eval(Env env) {
-            var values = args.Select(a => a.eval(env)).ToArray();
+            var values = args.Select(a => a.Value.eval(env)).ToArray();
             int? ai = values[0].getInt();
             int? bi = values[1].getInt();
             float? af = values[0].getFloat();
@@ -32,12 +33,16 @@ namespace Audubon {
             }
         }
 
-        void IAst.UpdateArgs(IEnumerable<IAst> args) {
-            this.args = args.ToArray();
-        }
-
-        IEnumerable<IAst> IFunction.getArgs() {
-            return args;
+        void IFunction.AddArg(IAst ast, string argID)
+        {
+            if (args.Keys.Contains(argID))
+            {
+                args[argID] = ast;
+            }
+            else
+            {
+                Debug.LogError("Argument " + argID + "is not " + "'+' function argument");
+            }
         }
     }
 }

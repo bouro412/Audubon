@@ -30,9 +30,6 @@ namespace Audubon {
         // Update is called once per frame
         protected void Update() {
             displayInformation();
-            if (isEdited()) {
-                expression.UpdateArgs(args);
-            }
         }
 
         bool isEdited() {

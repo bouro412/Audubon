@@ -10,7 +10,6 @@ public class Menu : MonoBehaviour, IMenu{
     public GameObject[] MenuPrehabs;
     [SerializeField, TooltipAttribute("各typeの名前を入れてください")]
     public string[] types;
-    Audubon.Const[] vals = { new Audubon.Const((int)0), new Audubon.Const((float)0), new Audubon.Const(true) };
     int index = 0;
     GameObject menuObject;
     IMenu nextMenu;
