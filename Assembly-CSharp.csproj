@@ -46,7 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ArgPipe.cs" />
      <Compile Include="Assets\Lib\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\Lib\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\Lib\SteamVR\Extras\SteamVR_Teleporter.cs" />
@@ -149,8 +148,8 @@
      <Compile Include="Assets\Lib\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
      <Compile Include="Assets\Lib\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
      <Compile Include="Assets\Lib\SteamVR\Scripts\SteamVR_Utils.cs" />
+     <Compile Include="Assets\Script\ArgPipe.cs" />
      <Compile Include="Assets\Script\CatchNode.cs" />
-     <Compile Include="Assets\Script\ConstNodeChoice.cs" />
      <Compile Include="Assets\Script\Lang\Const.cs" />
      <Compile Include="Assets\Script\Lang\Env.cs" />
      <Compile Include="Assets\Script\Lang\For.cs" />
@@ -167,6 +166,7 @@
      <Compile Include="Assets\Script\Menu\IntMenu.cs" />
      <Compile Include="Assets\Script\Menu\Menu.cs" />
      <Compile Include="Assets\Script\Nodes\ExpNode.cs" />
+     <Compile Include="Assets\Script\Nodes\FunctionNode.cs" />
      <Compile Include="Assets\Script\Nodes\VariableSourceNode.cs" />
      <Compile Include="Assets\Script\VIVEController.cs" />
      <Compile Include="Assets\Script\someting\ICatchable.cs" />

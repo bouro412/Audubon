@@ -47,7 +47,8 @@ namespace Audubon {
     */
     // 試しにinterfaceにしてみる
     public interface IFunction: IAst{
-        int getArgNum();
+        int GetArgNum();
         void AddArg(IAst ast, string argID);
+		string[] GetIDs ();
     }
 }

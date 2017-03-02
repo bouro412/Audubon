@@ -12,7 +12,7 @@ namespace Audubon {
             args.Add("y", null);
         }
         
-        int IFunction.getArgNum() {
+        int IFunction.GetArgNum() {
             return 2;
         }
 
@@ -44,5 +44,8 @@ namespace Audubon {
                 Debug.LogError("Argument " + argID + "is not " + "'+' function argument");
             }
         }
+		string[] IFunction.GetIDs(){
+			return new string[] {"x", "y"};
+		}
     }
 }

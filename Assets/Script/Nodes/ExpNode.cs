@@ -6,46 +6,30 @@ using UnityEngine;
 namespace Audubon {
     public class ExpNode : MonoBehaviour, ICatchable {
         public IAst expression;
-        Value LangValue { get; set; }
         TextMesh info;
-        public GameObject[] argObjects;
-        List<IAst> args;
-        List<IAst> argsCache;
-        GameObject CatchingHand;
 
         // Use this for initialization
         void Start() {
-            if (argObjects == null) {
-                args = new List<IAst>();
-            } else {
-                args = argObjects.Select(a => a.GetComponent<IAst>()).ToList();
-            }
-            argsCache = new List<IAst>(args);
-            if(expression == null )expression = new Const();
-            if(expression is IFunction) {
-                
-            }
-        }
+			if (expression == null) {
+				expression = new Const (123);
+			}
+		}
 
         // Update is called once per frame
         protected void Update() {
             displayInformation();
+			Rigidbody rigid = GetComponent<Rigidbody> ();
+			Debug.Log (rigid.velocity);
         }
 
-        bool isEdited() {
-            var ret = args.SequenceEqual(argsCache);
-            if (!ret) {
-                argsCache = args;
-                return true;
-            }
-            return false;
-        }
-        void displayInformation() {
-            if (info == null) {
-                info = this.GetComponentInChildren<TextMesh>();
-            }
-            info.text = expression.information();
-        }
+        protected void displayInformation() {
+			if (info == null) {
+				info = this.GetComponentInChildren<TextMesh> ();
+			} else {
+				Debug.Log (expression == null);
+				info.text = expression.information ();
+			}
+		}
         public virtual Value eval(Env env) {
             return expression.eval(env);
         }
