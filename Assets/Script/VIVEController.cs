@@ -1,8 +1,11 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Audubon.Interface;
+using Audubon.Menu;
 
+namespace Audubon {
 /// <summary>
 /// 移動, メニュー, ノードのキャッチ
 /// </summary>
@@ -137,4 +140,5 @@ public class VIVEController : MonoBehaviour{
         }
     }
     #endregion
+}
 }

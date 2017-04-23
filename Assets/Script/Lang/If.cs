@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Audubon {
+namespace Audubon.Lang {
     public class If : IAst {
         public IAst Cond;
         public IAst Then;

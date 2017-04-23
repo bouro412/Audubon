@@ -1,9 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 using System.Collections.Generic;
 
-namespace Audubon {
+namespace Audubon.Lang {
     public class Const : IAst {
         Value audubonValue { get; set; }
 

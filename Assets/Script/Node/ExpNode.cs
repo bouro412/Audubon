@@ -1,9 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Audubon.Lang;
+using Audubon.Interface;
 
-namespace Audubon {
+namespace Audubon.Node {
     public class ExpNode : MonoBehaviour, ICatchable {
         public IAst expression;
         TextMesh info;

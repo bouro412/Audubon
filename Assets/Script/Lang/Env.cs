@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Audubon {
+namespace Audubon.Lang {
     public class Env {
         Dictionary<string, Value> table;
         public Env() {

@@ -1,8 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace Audubon.Menu {
 public class Menu : MonoBehaviour, IMenu{
     public GameObject TopMenu;
     public GameObject NodePrehab;
@@ -55,4 +56,5 @@ public class Menu : MonoBehaviour, IMenu{
     bool IMenu.isMenuClose() {
         return isClose;
     }   
+}
 }

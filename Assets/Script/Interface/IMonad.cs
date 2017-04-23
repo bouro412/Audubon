@@ -1,7 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Audubon.Interface {
 public class IMonad : MonoBehaviour {
 
 	// Use this for initialization
@@ -13,4 +14,5 @@ public class IMonad : MonoBehaviour {
 	void Update () {
 		
 	}
+}
 }

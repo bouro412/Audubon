@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Audubon {
+namespace Audubon.Lang {
     public class Value {
         public object value { get; protected set; }
         public Value(object value) {

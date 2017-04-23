@@ -1,25 +1,31 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Audubon.Lang;
 
-namespace Audubon {
-    public class VariableSource : MonoBehaviour {
+namespace Audubon.Node
+{
+    public class VariableSource : MonoBehaviour
+    {
         public string VarName;
         TextMesh info;
 
         public GameObject PlaneNode;
 
-        void Start() {
+        void Start()
+        {
             this.GetComponent<MeshRenderer>().material.color = Color.green;
         }
 
-        void Update() {
+        void Update()
+        {
             displayInformation();
         }
 
 
         [ContextMenu("CreateVariableNode")]
-        public GameObject CreateVariableNode() {
+        public GameObject CreateVariableNode()
+        {
 
             GameObject instance = Instantiate(PlaneNode.gameObject, transform.position + new Vector3(1, 1, 1),
                                               transform.rotation) as GameObject;
@@ -31,8 +37,10 @@ namespace Audubon {
         }
 
 
-        void displayInformation() {
-            if (info == null) {
+        void displayInformation()
+        {
+            if (info == null)
+            {
                 info = GetComponentInChildren<TextMesh>();
             }
             info.text = VarName;

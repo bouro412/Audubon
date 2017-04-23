@@ -1,9 +1,12 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Audubon.Lang;
+using Audubon.Node;
 
+namespace Audubon.Menu {
 public class IntMenu : MonoBehaviour, IMenu {
     public GameObject NodePrehab;
     int currentValue = 0;
@@ -35,7 +38,7 @@ public class IntMenu : MonoBehaviour, IMenu {
         }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger)) {
             var node = Instantiate(NodePrehab, transform.position, Quaternion.Euler(0, 180, 0));
-            node.GetComponent<Audubon.ExpNode>().expression = new Audubon.Const((int)currentValue);
+            node.GetComponent<ExpNode>().expression = new Const((int)currentValue);
             isClose = true;
         }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu)) {
@@ -45,4 +48,5 @@ public class IntMenu : MonoBehaviour, IMenu {
     bool IMenu.isMenuClose() {
         return isClose;
     }
+}
 }

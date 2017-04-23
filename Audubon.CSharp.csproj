@@ -179,6 +179,9 @@
     <Compile Include="Assets\Lib\SteamVR\Scripts\SteamVR_Utils.cs" />
     <Compile Include="Assets\Script\ArgPipe.cs" />
     <Compile Include="Assets\Script\CatchNode.cs" />
+    <Compile Include="Assets\Script\Interface\ICatchable.cs" />
+    <Compile Include="Assets\Script\Interface\IFunctor.cs" />
+    <Compile Include="Assets\Script\Interface\IMonad.cs" />
     <Compile Include="Assets\Script\Lang\Const.cs" />
     <Compile Include="Assets\Script\Lang\Env.cs" />
     <Compile Include="Assets\Script\Lang\For.cs" />
@@ -194,12 +197,10 @@
     <Compile Include="Assets\Script\Menu\IMenu.cs" />
     <Compile Include="Assets\Script\Menu\IntMenu.cs" />
     <Compile Include="Assets\Script\Menu\Menu.cs" />
-    <Compile Include="Assets\Script\Nodes\ExpNode.cs" />
-    <Compile Include="Assets\Script\Nodes\VariableSourceNode.cs" />
+    <Compile Include="Assets\Script\Node\ExpNode.cs" />
+    <Compile Include="Assets\Script\Node\FunctionNode.cs" />
+    <Compile Include="Assets\Script\Node\VariableSourceNode.cs" />
     <Compile Include="Assets\Script\VIVEController.cs" />
-    <Compile Include="Assets\Script\someting\ICatchable.cs" />
-    <Compile Include="Assets\Script\someting\IFunctor.cs" />
-    <Compile Include="Assets\Script\someting\IMonad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Lib\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
