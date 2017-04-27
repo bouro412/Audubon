@@ -60,7 +60,7 @@ namespace Audubon.Node
                 var node = collider.gameObject.GetComponent<IAstNode>();
                 _ast = node.GetAst();
                 // gameObject.GetComponentInChildren<MeshRenderer>().material.color = Color.blue;
-                DestroyImmediate(collider.gameObject);
+                Destroy(collider.gameObject, 0.0f);
             }
         }
         #endregion

@@ -1,15 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Nodes\FunctionNode.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Node\FunctionNode.cs">
     <Files>
-      <File FileName="Assets\Script\VIVEController.cs" Line="74" Column="47" />
-      <File FileName="Assets\Script\Nodes\ExpNode.cs" Line="12" Column="9" />
-      <File FileName="Assets\Script\ArgPipe.cs" Line="15" Column="7" />
-      <File FileName="Assets\Script\Nodes\FunctionNode.cs" Line="27" Column="1" />
-      <File FileName="Assets\Script\Lang\Function.cs" Line="50" Column="22" />
+      <File FileName="Assets\Script\VIVEController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Lang\Function.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Lang\Value.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Lang\Const.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Lang\Function\Plus.cs" Line="48" Column="24" />
+      <File FileName="Assets\Script\Lang\Function\Plus.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Node\FunctionNode.cs" Line="36" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

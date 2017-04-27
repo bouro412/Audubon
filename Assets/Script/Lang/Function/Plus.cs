@@ -5,11 +5,15 @@ using System;
 
 namespace Audubon.Lang.Function {
     public class Plus : IFunction {
-        Dictionary<string, IAst> args;
-        void Start() {
-            args = new Dictionary<string, IAst>();
-            args.Add("x", null);
-            args.Add("y", null);
+        /// <summary>
+        /// à¯êîÉeÅ[ÉuÉã
+        /// </summary>
+        private Dictionary<string, IAst> Args { get; set; }
+
+        public Plus() {
+            Args = new Dictionary<string, IAst>();
+            Args.Add("x", null);
+            Args.Add("y", null);
         }
         
         int IFunction.GetArgNum() {
@@ -21,7 +25,7 @@ namespace Audubon.Lang.Function {
         }
 
         Value IAst.eval(Env env) {
-            var values = args.Select(a => a.Value.eval(env)).ToArray();
+            var values = Args.Select(a => a.Value.eval(env)).ToArray();
             int? ai = values[0].getInt();
             int? bi = values[1].getInt();
             float? af = values[0].getFloat();
@@ -35,9 +39,9 @@ namespace Audubon.Lang.Function {
 
         void IFunction.AddArg(IAst ast, string argID)
         {
-            if (args.Keys.Contains(argID))
+            if (Args.Keys.Contains(argID))
             {
-                args[argID] = ast;
+                Args[argID] = ast;
             }
             else
             {
