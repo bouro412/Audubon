@@ -4,43 +4,46 @@ using UnityEngine;
 using Audubon.Interface;
 using Audubon.Lang;
 using Audubon.Lang.Function;
+using System;
 
 namespace Audubon.Node
 {
-    public class FunctionNode : ExpNode, ICatchable
+    /// <summary>
+    /// function‚ğ‚Âƒm[ƒh
+    /// ˆø”‚Ìˆø‚«“n‚µ‚ª‚Å‚«‚é
+    /// </summary>
+    public class FunctionNode : MonoBehaviour, ICatchable
     {
-        public GameObject[] argPipe;
-        public IFunction function;
-        int argNum;
-        public GameObject[] PipePrehabs;
+        public ArgPipe Pipe;
+        private IFunction Function;
+        private int _argNum;
+        private int current_arg = 0;
 
-        // Use this for initialization
-        void Start()
+        private void Start()
         {
-            if (function == null)
+            if (Function == null)
             {
-                function = new Plus();
+                Function = new Plus();
             }
-            argNum = function.GetArgNum();
-            if (argNum - 1 < PipePrehabs.Length)
-            {
-                var pipes = Instantiate(PipePrehabs[argNum - 1], gameObject.transform);
-                argPipe = new GameObject[argNum];
-                for (int i = 0; i < pipes.transform.childCount; i++)
-                {
-                    var pipe = pipes.transform.GetChild(i).gameObject;
-                    argPipe[i] = pipe;
-                    pipe.GetComponent<ArgPipe>().argID = function.GetIDs()[i];
-                }
-            }
-            else {
-                Debug.LogError("Too Many Argument.");
-            }
+            _argNum = Function.GetArgNum();
         }
 
-        // Update is called once per frame
-        void Update()
+        /// <summary>
+        /// pipe‚©‚çˆø”‚ğó‚¯æ‚é
+        /// </summary>
+        private void Update()
         {
+            if (Pipe.HasArg())
+            {
+
+                var arg = Pipe.GetArg();
+                Function.AddArg(arg, Function.GetIDs()[current_arg++]);
+                // ˆø”‚ª\•ª‚É“n‚Á‚½‚çpipe‚ğÁ‚·
+                if(current_arg == _argNum)
+                {
+                    DestroyImmediate(Pipe.gameObject);     
+                }
+            }
         }
     }
 }

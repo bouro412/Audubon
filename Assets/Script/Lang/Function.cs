@@ -46,6 +46,9 @@ namespace Audubon.Lang {
     }
     */
     // 試しにinterfaceにしてみる
+    /// <summary>
+    /// Functionを表すinterface
+    /// </summary>
     public interface IFunction: IAst{
         int GetArgNum();
         void AddArg(IAst ast, string argID);

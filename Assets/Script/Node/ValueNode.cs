@@ -4,16 +4,17 @@ using System.Linq;
 using UnityEngine;
 using Audubon.Lang;
 using Audubon.Interface;
+using System;
 
 namespace Audubon.Node {
-    public class ExpNode : MonoBehaviour, ICatchable {
-        public IAst expression;
+    public class ValueNode : MonoBehaviour, ICatchable, IAstNode {
+        public Const valueExp;
         TextMesh info;
 
         // Use this for initialization
         void Start() {
-			if (expression == null) {
-				expression = new Const (123);
+			if (valueExp == null) {
+				valueExp = new Const (123);
 			}
 		}
 
@@ -28,13 +29,14 @@ namespace Audubon.Node {
 			if (info == null) {
 				info = this.GetComponentInChildren<TextMesh> ();
 			} else {
-				Debug.Log (expression == null);
-				info.text = expression.information ();
+				Debug.Log (valueExp == null);
+				info.text = valueExp.information ();
 			}
 		}
-        public virtual Value eval(Env env) {
-            return expression.eval(env);
-        }
 
+        IAst IAstNode.GetAst()
+        {
+            return valueExp;
+        }
     }
 }

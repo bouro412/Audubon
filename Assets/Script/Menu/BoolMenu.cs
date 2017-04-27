@@ -36,7 +36,7 @@ namespace Audubon.Menu
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
             {
                 var node = Instantiate(NodePrehab, transform.position, Quaternion.Euler(0, 180, 0));
-                node.GetComponent<ExpNode>().expression = new Const((bool)currentValue);
+                node.GetComponent<ValueNode>().valueExp = new Const((bool)currentValue);
                 isClose = true;
             }
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))

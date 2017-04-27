@@ -38,7 +38,7 @@ public class IntMenu : MonoBehaviour, IMenu {
         }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger)) {
             var node = Instantiate(NodePrehab, transform.position, Quaternion.Euler(0, 180, 0));
-            node.GetComponent<ExpNode>().expression = new Const((int)currentValue);
+            node.GetComponent<ValueNode>().valueExp = new Const((int)currentValue);
             isClose = true;
         }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu)) {

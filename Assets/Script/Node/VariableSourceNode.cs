@@ -5,45 +5,45 @@ using Audubon.Lang;
 
 namespace Audubon.Node
 {
-    public class VariableSource : MonoBehaviour
+    public class VariableSourceNode : MonoBehaviour
     {
         public string VarName;
-        TextMesh info;
+        private TextMesh _info;
 
         public GameObject PlaneNode;
 
-        void Start()
+        private void Start()
         {
             this.GetComponent<MeshRenderer>().material.color = Color.green;
         }
 
-        void Update()
+        private void Update()
         {
             displayInformation();
         }
 
-
+        /*
         [ContextMenu("CreateVariableNode")]
         public GameObject CreateVariableNode()
         {
 
             GameObject instance = Instantiate(PlaneNode.gameObject, transform.position + new Vector3(1, 1, 1),
                                               transform.rotation) as GameObject;
-            instance.AddComponent<ExpNode>();
-            var variable = instance.GetComponent<ExpNode>();
-            variable.expression = new Variable(VarName);
+            instance.AddComponent<ValueNode>();
+            var variable = instance.GetComponent<ValueNode>();
+            variable.valueExp = new Variable(VarName);
 
             return instance;
         }
-
+    */
 
         void displayInformation()
         {
-            if (info == null)
+            if (_info == null)
             {
-                info = GetComponentInChildren<TextMesh>();
+                _info = GetComponentInChildren<TextMesh>();
             }
-            info.text = VarName;
+            _info.text = VarName;
         }
     }
 }
