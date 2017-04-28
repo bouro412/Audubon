@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Audubon.Lang {
+    /// <summary>
+    /// 変数データを表す
+    /// </summary>
     public class Variable : IAst {
         public string VarName;
 
-        public string information() {
+        string IAst.information() {
             return VarName;
         }
 
-        public Value eval(Env env) {
+        Value IAst.eval(Env env) {
             return env.apply(VarName);
-        }
-
-        public void UpdateArgs(IEnumerable<IAst> args) {
-            throw new NotImplementedException();
         }
 
         public Variable(string name) {

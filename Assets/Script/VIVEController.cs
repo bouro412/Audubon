@@ -128,13 +128,11 @@ public class VIVEController : MonoBehaviour{
 
     #region Trigger
     void OnTriggerEnter(Collider collider) {
-        Debug.Log("TriggerEnter");
         if (collider.gameObject.GetComponent<ICatchable>() != null) {
             Target = collider.gameObject;
         }
     }
     void OnTriggerExit(Collider collider) {
-        Debug.Log("TriggerExit");
         if (collider.gameObject == Target) {
             Target = null;
         }

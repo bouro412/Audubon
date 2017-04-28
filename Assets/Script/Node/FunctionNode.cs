@@ -12,7 +12,7 @@ namespace Audubon.Node
     /// function‚ğ‚Âƒm[ƒh
     /// ˆø”‚Ìˆø‚«“n‚µ‚ª‚Å‚«‚é
     /// </summary>
-    public class FunctionNode : Node, ICatchable
+    public class FunctionNode : Node, ICatchable, IAstNode
     {
         public ArgPipe Pipe;
         private IFunction Function;
@@ -78,6 +78,11 @@ namespace Audubon.Node
                 ret = ret.Substring(0, ret.Length - 1);
             ret += ")";
             return ret;
+        }
+
+        IAst IAstNode.GetAst()
+        {
+            return Function;
         }
     }
 }

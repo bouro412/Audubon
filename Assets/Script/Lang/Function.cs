@@ -22,7 +22,7 @@ namespace Audubon.Lang {
             return _argNum;
         }
 
-        public Value eval(Env env) {
+        public AudubonValue eval(Env env) {
             if (!isCorrectArg()) {
                 Debug.LogError("引数の数が正しくありません");
                 return null;
@@ -35,7 +35,7 @@ namespace Audubon.Lang {
             this.args = args.ToArray();
         }
 
-        protected virtual Value run(Value[] values) {
+        protected virtual AudubonValue run(AudubonValue[] values) {
             Debug.LogError("メソッドの中身が定義されていません");
             return null;
         }

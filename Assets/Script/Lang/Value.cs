@@ -22,9 +22,11 @@ namespace Audubon.Lang {
         }
         public virtual void AddDefaultNode(GameObject obj) {
         }
-        public virtual string information() {
+        
+        public virtual  string information() { 
             return value.ToString();
         }
+        
     }
 
     public class Int : Value {

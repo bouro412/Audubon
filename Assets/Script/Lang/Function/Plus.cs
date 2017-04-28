@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Audubon.Lang;
 
 namespace Audubon.Lang.Function {
     public class Plus : IFunction {
@@ -24,8 +25,10 @@ namespace Audubon.Lang.Function {
             return "+";
         }
 
-        Value IAst.eval(Env env) {
+        Value IAst.eval(Env env)
+        {
             var values = Args.Select(a => a.Value.eval(env)).ToArray();
+            
             int? ai = values[0].getInt();
             int? bi = values[1].getInt();
             float? af = values[0].getFloat();
@@ -35,7 +38,33 @@ namespace Audubon.Lang.Function {
             } else {
                 return new Float((float)((ai ?? af) + (bi ?? bf)));
             }
+            /*
+            if (values[0] is Value<int> && values[1] is Value<int>)
+            {
+                return new Int((Value<int>)values[0].value + 
+                               (Value<int>)values[1].value);
+            }
+            else if (values[0] is Value<float> && values[1] is Value<int>)
+            {
+                return new Float((Value<float>)values[0].value + 
+                                 (Value<int>)values[1].value);
+            }
+            else if (values[0] is Value<int> && values[1] is Value<float>) {
+                return new Float((Value<int>)values[0].value +
+                                 (Value<float>)values[1].value);
+            }
+            else if (values[0] is Value<float> && values[1] is Value<float>)
+            {
+                return new Float((Value<float>)values[0].value +
+                                 (Value<float>)values[1].value);
+            }
+            else
+            {
+                throw new Exception("TypeError: plus");
+            }*/
         }
+
+
 
         void IFunction.AddArg(IAst ast, string argID)
         {
