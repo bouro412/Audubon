@@ -7,7 +7,7 @@ namespace Audubon.Menu
 {
     public class FunctionMenu : MonoBehaviour, IMenu
     {
-        public Text NumberText;
+        public Text ChoicesText;
 
         private string _functionPrehabPath = "prefab/FunctionNode";
         private int currentIndex = 0;
@@ -38,7 +38,7 @@ namespace Audubon.Menu
             {
                 var prefab = (GameObject)Resources.Load(_functionPrehabPath);
                 var node = Instantiate(prefab, transform.position, Quaternion.Euler(0, 180, 0));
-                node.GetComponent<Lang.Function.Plus>();
+                node.GetComponent<Node.FunctionNode>();
                 isClose = true;
             }
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))
