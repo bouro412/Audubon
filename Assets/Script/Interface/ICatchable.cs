@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Audubon.Interface {
-public interface ICatchable{
-}
+namespace Audubon.Interface
+{
+    internal interface ICatchable : IClickable
+    {
+    }
 }

@@ -16,12 +16,11 @@ namespace Audubon
         public GameObject CameraRig;
         public GameObject CameraEye;
         private GameObject Menu;
-        private string MenuPath = "Prefab/Menu/HandMenu";
         SteamVR_TrackedObject Controller;
-    SteamVR_Controller.Device device;
+        SteamVR_Controller.Device device;
 
         // Drag Node
-        GameObject Target; // 掴む対象
+        GameObject Target; // 現在アクションの対象となっているオブジェクト
         Rigidbody attachPoint; // コントローラーのRigidBody
         HingeJoint joint; // コントローラーとオブジェクトを結合するJoint
 
@@ -62,6 +61,7 @@ namespace Audubon
         #region 各StateのUpdate
         void NormalUpdate()
         {
+            //移動
             if (device.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
             {
                 var axis = device.GetAxis();
@@ -80,18 +80,29 @@ namespace Audubon
                 }
                 CameraRig.transform.Translate(moveForward + moveSide);
             }
+            // トリガーボタン
             if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger) && Target != null)
             {
-                Target.transform.position = attachPoint.transform.position;
-                Target.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+                // キャッチ
+                if (Target.GetComponent<ICatchable>() != null)
+                {
+                    Target.transform.position = attachPoint.transform.position;
+                    Target.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
-                joint = Target.AddComponent<HingeJoint>();
-                joint.connectedBody = attachPoint;
-                state = State.Drag;
+                    joint = Target.AddComponent<HingeJoint>();
+                    joint.connectedBody = attachPoint;
+                    state = State.Drag;
+                }
+                // イベント
+                if(Target.GetComponent<IHasClickEvent>() != null)
+                {
+                    Target.GetComponent<IHasClickEvent>().ClickEvent();
+                }
             }
+            // メニュー
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))
             {
-                var prefab = (GameObject)Resources.Load(MenuPath);
+                var prefab = PrefabManager.Instance.GetPrefab("Menu");
                 Menu = Instantiate(prefab, transform, false);
 
                 state = State.Menu;
@@ -151,7 +162,7 @@ namespace Audubon
         #region Trigger
         void OnTriggerEnter(Collider collider)
         {
-            if (collider.gameObject.GetComponent<ICatchable>() != null)
+            if (collider.gameObject.GetComponent<IClickable>() != null)
             {
                 Target = collider.gameObject;
             }

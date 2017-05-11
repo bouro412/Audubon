@@ -2,48 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Audubon.Lang;
+using Audubon.Interface;
+using System;
 
 namespace Audubon.Node
 {
-    public class VariableSourceNode : MonoBehaviour
+    public class VariableSourceNode : Node, IHasClickEvent
     {
         public string VarName;
-        private TextMesh _info;
 
-        public GameObject PlaneNode;
-
-        private void Start()
-        {
-            this.GetComponent<MeshRenderer>().material.color = Color.green;
-        }
-
-        private void Update()
-        {
-            displayInformation();
-        }
-
-        /*
         [ContextMenu("CreateVariableNode")]
         public GameObject CreateVariableNode()
         {
 
-            GameObject instance = Instantiate(PlaneNode.gameObject, transform.position + new Vector3(1, 1, 1),
+            var prefab = PrefabManager.Instance.GetPrefab("VariableNode");
+            GameObject instance = Instantiate(prefab, transform.position + new Vector3(0, -0.5f, 0),
                                               transform.rotation) as GameObject;
-            instance.AddComponent<ValueNode>();
-            var variable = instance.GetComponent<ValueNode>();
-            variable.valueExp = new Variable(VarName);
-
+            instance.GetComponent<VariableNode>().Initialize(VarName);
             return instance;
         }
-    */
-
-        void displayInformation()
+        protected override string Information()
         {
-            if (_info == null)
-            {
-                _info = GetComponentInChildren<TextMesh>();
-            }
-            _info.text = VarName;
+            return VarName;
+        }
+
+        void IHasClickEvent.ClickEvent()
+        {
+            CreateVariableNode();
         }
     }
 }
