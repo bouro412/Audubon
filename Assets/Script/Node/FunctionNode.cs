@@ -38,7 +38,7 @@ namespace Audubon.Node
         /// <summary>
         /// pipe‚©‚çˆø”‚ğó‚¯æ‚é
         /// </summary>
-        private void Update()
+        new private void Update()
         {
             base.Update();
             if (Pipe.HasArg())

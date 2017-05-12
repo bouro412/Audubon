@@ -96,7 +96,7 @@ namespace Audubon
                 // イベント
                 if(Target.GetComponent<IHasClickEvent>() != null)
                 {
-                    Target.GetComponent<IHasClickEvent>().ClickEvent();
+                    Target.GetComponent<IHasClickEvent>().ClickEvent(device);
                 }
             }
             // メニュー

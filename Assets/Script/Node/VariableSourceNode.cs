@@ -26,7 +26,7 @@ namespace Audubon.Node
             return VarName;
         }
 
-        void IHasClickEvent.ClickEvent()
+        void IHasClickEvent.ClickEvent(SteamVR_Controller.Device controller)
         {
             CreateVariableNode();
         }

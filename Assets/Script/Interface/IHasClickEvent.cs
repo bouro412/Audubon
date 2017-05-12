@@ -7,6 +7,6 @@ namespace Audubon.Interface
 {
     interface IHasClickEvent : IClickable
     {
-        void ClickEvent();
+        void ClickEvent(SteamVR_Controller.Device conntroller);
     }
 }
