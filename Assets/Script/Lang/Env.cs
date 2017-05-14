@@ -14,7 +14,7 @@ namespace Audubon.Lang {
             _table = new Dictionary<string, Value>(oldTable);
         }
 
-        public Value apply(string varname) {
+        public Value Apply(string varname) {
             Value val;
             try
             {
@@ -31,7 +31,7 @@ namespace Audubon.Lang {
             _table[varname] = value;
         }
 
-        public Env extend(string varname, Value value) {
+        public Env Extend(string varname, Value value) {
             var newtable = new Env(_table);
             newtable._extend(varname, value);
             return newtable;

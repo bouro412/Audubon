@@ -9,15 +9,29 @@ namespace Audubon.Node
 {
     public class LambdaNode : Node, IAstNode, ICatchable, IHasClickEvent
     {
-
+        private IAst BodyAst { get; set; }
+        public int ArgNum { get; private set; }
         void IHasClickEvent.ClickEvent(SteamVR_Controller.Device controller)
         {
-
+            if (controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
+            {
+                if(controller.GetAxis().x < -0.3)
+                {
+                    ArgNum = Mathf.Min(ArgNum - 1, 0);
+                }else if(controller.GetAxis().x > 0.3)
+                {
+                    ArgNum += 1;
+                }
+            }
         }
 
         IAst IAstNode.GetAst()
         {
-            throw new NotImplementedException();
+        }
+
+        protected override string Information()
+        {
+            return "Lambda: " + ArgNum;
         }
 
         // Use this for initialization

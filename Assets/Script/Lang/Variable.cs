@@ -15,7 +15,7 @@ namespace Audubon.Lang {
         }
 
         Value IAst.eval(Env env) {
-            return env.apply(VarName);
+            return env.Apply(VarName);
         }
 
         public Variable(string name) {
