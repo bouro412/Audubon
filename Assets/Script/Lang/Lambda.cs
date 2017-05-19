@@ -51,6 +51,9 @@ namespace Audubon.Lang
         {
             return "Lambda:" + ((IFunction)this).GetArgNum();
         }
+
+
+
         public Lambda(string[] args, IAst body)
         {
             Args = new Dictionary<string, IAst>();

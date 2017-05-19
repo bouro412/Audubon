@@ -179,6 +179,7 @@
     <Compile Include="Assets\Lib\SteamVR\Scripts\SteamVR_Utils.cs" />
     <Compile Include="Assets\Script\Blackboard.cs" />
     <Compile Include="Assets\Script\CatchNode.cs" />
+    <Compile Include="Assets\Script\FieldManager.cs" />
     <Compile Include="Assets\Script\Interface\ICatchable.cs" />
     <Compile Include="Assets\Script\Interface\IClickable.cs" />
     <Compile Include="Assets\Script\Interface\IFunctor.cs" />
@@ -187,10 +188,11 @@
     <Compile Include="Assets\Script\Lang\Const.cs" />
     <Compile Include="Assets\Script\Lang\Env.cs" />
     <Compile Include="Assets\Script\Lang\For.cs" />
-    <Compile Include="Assets\Script\Lang\Function.cs" />
     <Compile Include="Assets\Script\Lang\Function\Plus.cs" />
     <Compile Include="Assets\Script\Lang\IAST.cs" />
+    <Compile Include="Assets\Script\Lang\IFunction.cs" />
     <Compile Include="Assets\Script\Lang\If.cs" />
+    <Compile Include="Assets\Script\Lang\Lambda.cs" />
     <Compile Include="Assets\Script\Lang\Value.cs" />
     <Compile Include="Assets\Script\Lang\Value\Float.cs" />
     <Compile Include="Assets\Script\Lang\Value\Int.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="Assets\Script\ReturnArea.cs" />
     <Compile Include="Assets\Script\Room.cs" />
     <Compile Include="Assets\Script\VIVEController.cs" />
+    <Compile Include="Assets\Script\VariableMaker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Lib\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
