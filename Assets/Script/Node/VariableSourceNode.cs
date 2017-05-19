@@ -7,7 +7,7 @@ using System;
 
 namespace Audubon.Node
 {
-    public class VariableSourceNode : Node, IHasClickEvent
+    public class VariableSourceNode : Node, IHasEventOnCatched
     {
         public string VarName;
 
@@ -26,7 +26,7 @@ namespace Audubon.Node
             return VarName;
         }
 
-        void IHasClickEvent.ClickEvent(SteamVR_Controller.Device controller)
+        void IHasEventOnCatched.ClickEvent(SteamVR_Controller.Device controller)
         {
             CreateVariableNode();
         }

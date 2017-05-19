@@ -93,11 +93,7 @@ namespace Audubon
                     joint.connectedBody = attachPoint;
                     state = State.Drag;
                 }
-                // イベント
-                if(Target.GetComponent<IHasClickEvent>() != null)
-                {
-                    Target.GetComponent<IHasClickEvent>().ClickEvent(device);
-                }
+                
             }
             // メニュー
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))
@@ -122,6 +118,11 @@ namespace Audubon
         }
         void DragUpdate()
         {
+            // イベント
+            if (Target.GetComponent<IHasEventOnCatched>() != null)
+            {
+                Target.GetComponent<IHasEventOnCatched>().ClickEvent(device);
+            }
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))
             {
                 joint = null;

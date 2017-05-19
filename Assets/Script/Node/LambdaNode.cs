@@ -8,12 +8,12 @@ using Audubon;
 
 namespace Audubon.Node
 {
-    public class LambdaNode : Node, IAstNode, ICatchable, IHasClickEvent
+    public class LambdaNode : Node, IAstNode, ICatchable, IHasEventOnCatched
     {
         /// <summary>
         /// 関数本体を表すAST
         /// </summary>
-        private IAst _bodyAst { get; set; }
+        public IAst BodyAst { get; set; }
 
         /// <summary>
         /// このNodeが表すLambdaのAST
@@ -33,7 +33,7 @@ namespace Audubon.Node
         /// <summary>
         /// 引数の名前リスト
         /// </summary>
-        private List<string> _argNames { get; set; }
+        public List<string> ArgNames { get; private set; }
 
         /// <summary>
         /// 引数を受け取るPipe
@@ -41,41 +41,55 @@ namespace Audubon.Node
         private ArgPipe _pipe { get; set; }
 
         /// <summary>
+        /// プレイヤーの頭に触れているどうか
+        /// </summary>
+        private bool _isTouchHead = false;
+
+        /// <summary>
         /// 引数の個数の変更、それに合わせて引数の名前リストの生成
         /// </summary>
         /// <param name="controller"></param>
-        void IHasClickEvent.ClickEvent(SteamVR_Controller.Device controller)
+        void IHasEventOnCatched.ClickEvent(SteamVR_Controller.Device controller)
         {
-            if (controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
+            // 引数の増減
+            if (controller.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
             {
                 if(controller.GetAxis().x < -0.3)
                 {
-                    ArgNum = Mathf.Min(ArgNum - 1, 0);
+                    ArgNum = Mathf.Max(ArgNum - 1, 0);
                 }else if(controller.GetAxis().x > 0.3)
                 {
                     ArgNum += 1;
                 }
             }
-            if(_argNames.Count < ArgNum)
+            // 新しい引数に合わせて調整
+            if(ArgNames.Count < ArgNum) 
             {
-                for(var i = 0; i < ArgNum - _argNames.Count; i++)
+                for(var i = 0; i < ArgNum - ArgNames.Count; i++)
                 {
-                    _argNames.Add(VariableMaker.NewVariable());
+                    ArgNames.Add(VariableMaker.NewVariable());
                 }
-            }else if(_argNames.Count > ArgNum)
+            }else if(ArgNames.Count > ArgNum)
             {
-                for (var i = 0; i < _argNames.Count - ArgNum; i++)
+                for (var i = 0; i < ArgNames.Count - ArgNum; i++)
                 {
-                    _argNames.RemoveAt(_argNames.Count - 1);
+                    ArgNames.RemoveAt(ArgNames.Count - 1);
                 }
             }
+            // 顔に近づけたら編集
+            if (_isTouchHead)
+            {
+                _isTouchHead = false;
+                FieldManager.Instance.Open(this);
+            }
+
         }
 
         IAst IAstNode.GetAst()
         {
             if(_lambdaAst == null)
             {
-                _lambdaAst = new Lambda(_argNames.ToArray(), _bodyAst);
+                _lambdaAst = new Lambda(ArgNames.ToArray(), BodyAst);
             }
 
             return _lambdaAst;
@@ -90,6 +104,7 @@ namespace Audubon.Node
         void Start()
         {
             _pipe = GetComponentInChildren<ArgPipe>();
+            ArgNames = new List<string>();
         }
 
         // Update is called once per frame
@@ -109,6 +124,24 @@ namespace Audubon.Node
                 }
             }
         }
+        #region Trigger
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Head"))
+            {
+                _isTouchHead = true;
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Head"))
+            {
+                _isTouchHead = false;
+            }
+        }
+        #endregion  
+
     }
 
 }

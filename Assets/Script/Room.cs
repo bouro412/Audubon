@@ -24,7 +24,7 @@ namespace Audubon
         private int _argId { get; set; }
 
         /// <summary>
-        /// このROomの返り値となるAstNode
+        /// このRoomの返り値となるAstNode
         /// </summary>
         public IAstNode ReturnNode { get; private set; }
 
@@ -34,49 +34,31 @@ namespace Audubon
         private ReturnArea _returnArea { get; set; }
 
         /// <summary>
-        /// この部屋のGameObject
-        /// </summary>
-        public GameObject RoomObject { get; private set; }
-
-        /// <summary>
         /// roomidに合わせて変数の生成
         /// </summary>
         /// <param name="roomid"></param>
         /// <param name="argNum"></param>
-        public void Initialize(string roomid, int argNum)
+        public void Initialize(string[] argNames)
         {
-            if (_roomId != null) return;
-            _roomId = roomid;
             var argarea = transform.FindChild("ArgArea");
-            for(int i = 0;i < argNum; i++)
+            var prefab = PrefabManager.Instance.GetPrefab("VariableSourceNode");
+            for (int i = 0;i < argNames.Length; i++)
             {
-                var name = roomid + "_" + i;
-                var prefab = PrefabManager.Instance.GetPrefab("VariableSourceNode");
                 var instance = Instantiate(prefab, argarea.transform, false);
-                instance.GetComponent<VariableSourceNode>().VarName = name;
+                instance.GetComponent<VariableSourceNode>().VarName = argNames[i];
+                instance.transform.position += new Vector3(i, 0, 0);
             }
-            _argId = argNum;
             _returnArea = GetComponentInChildren<ReturnArea>();
-            RoomObject = this.gameObject;
         }
 
         /// <summary>
-        /// 部屋の終了、無効してこのクラスを返す
+        /// 部屋終了時に必要な処理
         /// </summary>
         /// <returns></returns>
-        private Room CloseRoom()
+        public void OnClose()
         {
             ReturnNode = _returnArea.Node;
-            gameObject.SetActive(false);
-            return this;
         }
 
-        /// <summary>
-        /// for test
-        /// </summary>
-        private void Start()
-        {
-            Initialize("root", 1);
-        }
     }
 }
