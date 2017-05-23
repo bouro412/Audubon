@@ -37,6 +37,12 @@ namespace Audubon
         /// </summary>
         private Dictionary<LambdaNode, Room> NodeRoomDict = new Dictionary<LambdaNode, Room>();
 
+        /// <summary>
+        /// Playerカメラの位置
+        /// </summary>
+        [SerializeField]
+        private GameObject Player;
+
         private void Awake()
         {
             Instance = this;
@@ -61,23 +67,39 @@ namespace Audubon
             if (NodeRoomDict.TryGetValue(originalNode, out room))
             {
                 room.gameObject.SetActive(true);
+                _currentRoom = room.gameObject;
             }
-            else {
+            else
+            {
                 // 初めての場合は作成、初期化、キャッシュ
                 var roomObject = Instantiate(PrefabManager.Instance.GetPrefab("Room"),
                                         transform, false);
                 roomObject.GetComponent<Room>().Initialize(originalNode.ArgNames.ToArray());
                 NodeRoomDict[originalNode] = roomObject.GetComponent<Room>();
+                _currentRoom = roomObject;
             }
         }
 
-        public void Close(Room room) 
+        /// <summary>
+        /// Roomを閉じる処理
+        /// </summary>
+        /// <param name="room"></param>
+        public void Close() 
         {
+            // 現在のRoomを無効化
+            var room = _currentRoom.GetComponent<Room>() ;
             room.OnClose();
-            var node = NodeRoomDict.First(x => x.Value == room).Key;
-            node.BodyAst = room.ReturnNode.GetAst();
             room.gameObject.SetActive(false);
-            _roomStack.Pop().SetActive(true);
+            // 返り値があればセットする
+            if (room.ReturnNode != null)
+            {
+                var node = NodeRoomDict.First(x => x.Value == room).Key;
+                node.BodyAst = room.ReturnNode.GetAst();
+            }
+            // 新しい部屋を有効化
+            var newroom = _roomStack.Pop();
+            _currentRoom = newroom;
+            newroom.SetActive(true);
         }
     }
 }

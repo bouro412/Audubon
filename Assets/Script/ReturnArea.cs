@@ -55,7 +55,7 @@ namespace Audubon
             }
             if (collider.CompareTag("Head"))
             {
-                FieldManager.Instance.Close(GetComponentInParent<Room>());
+                FieldManager.Instance.Close();
             }
         }
         #endregion
