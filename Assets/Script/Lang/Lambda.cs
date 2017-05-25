@@ -34,6 +34,10 @@ namespace Audubon.Lang
                 }
                 newenv = newenv.Extend(pair.Key, pair.Value.eval(env));
             }
+            if(BodyAst == null)
+            {
+                throw new Exception("Lambdaの本体が定義されていません");
+            }
             return BodyAst.eval(newenv);
         }
 
@@ -62,6 +66,15 @@ namespace Audubon.Lang
                 Args.Add(arg, null);
             }
             BodyAst = body;
+        }
+        public Lambda(Dictionary<string, IAst> table, IAst body)
+        {
+            Args = table;
+            BodyAst = body;
+        }
+        public void UpdateTable(Dictionary<string, IAst> table)
+        {
+            Args = table;
         }
     }
 }

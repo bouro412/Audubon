@@ -12,7 +12,6 @@ namespace Audubon.Menu
     {
         public Text NumberText;
 
-        private string _prefabPath = "prefab/ValueNode";
         private bool currentValue = true;
         private bool isClose = false;
 
@@ -35,8 +34,7 @@ namespace Audubon.Menu
             }
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
             {
-                var prefab = (GameObject)Resources.Load(_prefabPath);
-                var node = Instantiate(prefab, transform.position, Quaternion.Euler(0, 180, 0));
+                var node = NodeMaker.CreateNode("ValueNode", transform.position, Quaternion.Euler(0, 180, 0));
                 node.GetComponent<ValueNode>().valueExp = new Const((bool)currentValue);
                 isClose = true;
             }

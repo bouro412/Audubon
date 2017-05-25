@@ -12,13 +12,12 @@ namespace Audubon.Menu
     {
         public Text NumberText;
 
-        private string _prefabPath = "prefab/ValueNode";
         private float _currentValue = 0.0f;
         private bool _isClose = false;
 
         void IMenu.Update(SteamVR_TrackedObject controller)
         {
-            Debug.Log("Int Menu Update");
+            Debug.Log("Float Menu Update");
             var device = SteamVR_Controller.Input((int)controller.index);
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
             {
@@ -36,7 +35,7 @@ namespace Audubon.Menu
             }
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
             {
-                var node = Instantiate((GameObject)Resources.Load(_prefabPath),
+                var node = NodeMaker.CreateNode("ValueNode",
                                        transform.position, Quaternion.Euler(0, 180, 0));
                 node.GetComponent<ValueNode>().valueExp = new Const((float)_currentValue);
                 _isClose = true;

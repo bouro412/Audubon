@@ -58,6 +58,20 @@ namespace Audubon
                     throw new Exception("Unknown Controller State.");
             }
         }
+        /// <summary>
+        /// 現在のTargetを掴む
+        /// </summary>
+        public void Catch()
+        {
+            if (Target.GetComponent<ICatchable>() == null) return;
+            Target.transform.position = attachPoint.transform.position;
+            Target.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+            joint = Target.AddComponent<HingeJoint>();
+            joint.connectedBody = attachPoint;
+            state = State.Drag;
+        }
+
         #region 各StateのUpdate
         void NormalUpdate()
         {
@@ -81,7 +95,9 @@ namespace Audubon
                 CameraRig.transform.Translate(moveForward + moveSide);
             }
             // トリガーボタン
-            if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger) && Target != null)
+            if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger)
+                && Target != null
+                && Target.GetComponent<IClickable>() != null)
             {
                 // キャッチ
                 if (Target.GetComponent<ICatchable>() != null)
@@ -93,7 +109,10 @@ namespace Audubon
                     joint.connectedBody = attachPoint;
                     state = State.Drag;
                 }
-                
+                else if (Target.GetComponent<IClickEvent>() != null)
+                {
+                    Target.GetComponent<IClickEvent>().ClickEvent(device);
+                }
             }
             // メニュー
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))
@@ -118,18 +137,7 @@ namespace Audubon
         }
         void DragUpdate()
         {
-            // イベント
-            if (Target.GetComponent<IHasEventOnCatched>() != null)
-            {
-                Target.GetComponent<IHasEventOnCatched>().ClickEvent(device);
-            }
-            if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))
-            {
-                joint = null;
-                DestroyImmediate(Target);
-                state = State.Normal;
-            }
-            if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger))
+            if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger) || Target == null)
             {
                 var go = joint.gameObject;
                 var rigidbody = go.GetComponent<Rigidbody>();
@@ -155,6 +163,17 @@ namespace Audubon
                 }
 
                 rigidbody.maxAngularVelocity = rigidbody.angularVelocity.magnitude;
+                state = State.Normal;
+            }
+            // イベント
+            if (Target.GetComponent<IHasEventOnCatched>() != null)
+            {
+                Target.GetComponent<IHasEventOnCatched>().ClickEvent(device);
+            }
+            if (device.GetPressDown(SteamVR_Controller.ButtonMask.ApplicationMenu))
+            {
+                joint = null;
+                DestroyImmediate(Target);
                 state = State.Normal;
             }
         }

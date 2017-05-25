@@ -33,8 +33,16 @@ namespace Audubon
             if(other.GetComponent<IAstNode>() != null)
             {
                 var node = other.GetComponent<IAstNode>();
-                // Envの提供手段が整ってないため、とりあえずnewして渡す
-                _text.text = node.GetAst().eval(new Audubon.Lang.Env()).information();
+                try
+                {
+                    // Envの提供手段が整ってないため、とりあえずnewして渡す
+                    _text.text = node.GetAst().eval(new Audubon.Lang.Env()).information();
+                }
+                catch (Exception e)
+                {
+                    _text.text = e.Message;
+                    throw e;
+                }
             }
         }
     }

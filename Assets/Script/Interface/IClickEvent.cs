@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Audubon.Interface
 {
-    interface IHasEventOnCatched : ICatchable
+    interface IClickEvent : IClickable
     {
         void ClickEvent(SteamVR_Controller.Device conntroller);
     }

@@ -74,7 +74,7 @@ namespace Audubon
                 // 初めての場合は作成、初期化、キャッシュ
                 var roomObject = Instantiate(PrefabManager.Instance.GetPrefab("Room"),
                                         transform, false);
-                roomObject.GetComponent<Room>().Initialize(originalNode.ArgNames.ToArray());
+                roomObject.GetComponent<Room>().Initialize(originalNode.ArgNames);
                 NodeRoomDict[originalNode] = roomObject.GetComponent<Room>();
                 _currentRoom = roomObject;
             }

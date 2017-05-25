@@ -5,6 +5,7 @@ using Audubon.Interface;
 using System;
 using Audubon.Lang;
 using Audubon;
+using System.Linq;
 
 namespace Audubon.Node
 {
@@ -26,14 +27,21 @@ namespace Audubon.Node
         public int ArgNum { get; private set; }
 
         /// <summary>
-        /// 引数リスト
-        /// </summary>
-        private List<IAst> _argList { get; set; }
-
-        /// <summary>
         /// 引数の名前リスト
         /// </summary>
-        public List<string> ArgNames { get; private set; }
+        public string[] ArgNames { get {
+                return _argTableList.Select(pair => pair.Key).ToArray();
+            } }
+
+        /// <summary>
+        /// 引数テーブル, 順序が必要なためリストにしてある
+        /// </summary>
+        private List<KeyValuePair<string, IAst>> _argTableList { get; set; }
+
+        /// <summary>
+        /// 次に値を入れるべき引数インデックス
+        /// </summary>
+        private int _currentArgIndex = 0;
 
         /// <summary>
         /// 引数を受け取るPipe
@@ -63,17 +71,17 @@ namespace Audubon.Node
                 }
             }
             // 新しい引数に合わせて調整
-            if(ArgNames.Count < ArgNum) 
+            if(_argTableList.Count < ArgNum) 
             {
-                for(var i = 0; i < ArgNum - ArgNames.Count; i++)
+                for(var i = 0; i < ArgNum - _argTableList.Count; i++)
                 {
-                    ArgNames.Add(VariableMaker.NewVariable());
+                    ExtendTable();
                 }
-            }else if(ArgNames.Count > ArgNum)
+            }else if(_argTableList.Count > ArgNum)
             {
-                for (var i = 0; i < ArgNames.Count - ArgNum; i++)
+                for (var i = 0; i < _argTableList.Count - ArgNum; i++)
                 {
-                    ArgNames.RemoveAt(ArgNames.Count - 1);
+                    DeleteArg();
                 }
             }
             // 顔に近づけたら編集
@@ -89,7 +97,11 @@ namespace Audubon.Node
         {
             if(_lambdaAst == null)
             {
-                _lambdaAst = new Lambda(ArgNames.ToArray(), BodyAst);
+                _lambdaAst = new Lambda(GetArgTable(), BodyAst);
+            }
+            else
+            {
+                _lambdaAst.UpdateTable(GetArgTable());
             }
 
             return _lambdaAst;
@@ -104,26 +116,62 @@ namespace Audubon.Node
         void Start()
         {
             _pipe = GetComponentInChildren<ArgPipe>();
-            ArgNames = new List<string>();
+            _argTableList = new List<KeyValuePair<string, IAst>>();
         }
 
         // Update is called once per frame
-        void Update()
+        new void Update()
         {
+            // 引数が足りていないときにはパイプを表示
+            _pipe.gameObject.SetActive(!IsTableFull());
             base.Update();
             if (_pipe.HasArg())
             {
 
                 var arg = _pipe.GetArg();
-                _argList.Add(arg);
-                // 引数が十分に渡ったらpipeを消す
-                // TODO: 渡し切ったあとに引数の数を変更した場合
-                if (_argList.Count == ArgNum)
-                {
-                    DestroyImmediate(_pipe.gameObject);
-                }
+                PushValueToTable(arg);
             }
         }
+
+        private Dictionary<string, IAst> GetArgTable()
+        {
+            var table = new Dictionary<string, IAst>();
+            foreach (var pair in _argTableList)
+            {
+                table.Add(pair.Key, pair.Value);
+            }
+            return table;
+        }
+
+        private void ExtendTable()
+        {
+            _argTableList.Add(new KeyValuePair<string, IAst>(VariableMaker.NewVariable(), null));
+        }
+
+        private void PushValueToTable(IAst value)
+        {
+            var key = _argTableList[_currentArgIndex].Key;
+            _argTableList[_currentArgIndex++] = new KeyValuePair<string, IAst>(key, value);
+        }
+        private void ClearTopValueFromTable()
+        {
+            var key = _argTableList[_currentArgIndex].Key;
+            _argTableList[_currentArgIndex--] = new KeyValuePair<string, IAst>(key, null);
+        }
+        private void DeleteArg()
+        {
+            if(_currentArgIndex == _argTableList.Count)
+            {
+                _currentArgIndex--;
+            }
+            _argTableList.RemoveAt(_argTableList.Count - 1);
+        }
+        private bool IsTableFull()
+        {
+            return _currentArgIndex == _argTableList.Count;
+        }
+
+        
         #region Trigger
         private void OnTriggerEnter(Collider other)
         {

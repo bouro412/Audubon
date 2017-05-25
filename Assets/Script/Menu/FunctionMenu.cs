@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Audubon.Node;
 
 namespace Audubon.Menu
 {
@@ -9,7 +10,6 @@ namespace Audubon.Menu
     {
         public Text ChoicesText;
 
-        private string _functionPrehabPath = "prefab/FunctionNode";
         private int currentIndex = 0;
         private string[] _funcNames = new string[] {"Plus"};
         private bool isClose = false;
@@ -36,8 +36,7 @@ namespace Audubon.Menu
             }
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
             {
-                var prefab = (GameObject)Resources.Load(_functionPrehabPath);
-                var node = Instantiate(prefab, transform.position, Quaternion.Euler(0, 180, 0));
+                var node = NodeMaker.CreateNode("FunctionNode", transform.position, Quaternion.Euler(0, 180, 0));
                 node.GetComponent<Node.FunctionNode>();
                 isClose = true;
             }

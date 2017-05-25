@@ -42,11 +42,13 @@ namespace Audubon
         {
             var argarea = transform.FindChild("ArgArea");
             var prefab = PrefabManager.Instance.GetPrefab("VariableSourceNode");
+            var space = 0.3f;
+            var len = space * (argNames.Length - 1);
             for (int i = 0;i < argNames.Length; i++)
             {
                 var instance = Instantiate(prefab, argarea.transform, false);
                 instance.GetComponent<VariableSourceNode>().VarName = argNames[i];
-                instance.transform.position += new Vector3(i, 0, 0);
+                instance.transform.position += new Vector3(- len / 2 + i * space, 0, 0);
             }
             _returnArea = GetComponentInChildren<ReturnArea>();
         }

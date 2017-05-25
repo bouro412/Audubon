@@ -7,17 +7,17 @@ using System;
 
 namespace Audubon.Node
 {
-    public class VariableSourceNode : Node, IHasEventOnCatched
+    public class VariableSourceNode : Node, IClickEvent
     {
         public string VarName;
+        private GameObject _prevNode;
+        private Vector3 _initPosition;
 
         [ContextMenu("CreateVariableNode")]
         public GameObject CreateVariableNode()
         {
-
-            var prefab = PrefabManager.Instance.GetPrefab("VariableNode");
-            GameObject instance = Instantiate(prefab, transform.position + new Vector3(0, -0.5f, 0),
-                                              transform.rotation) as GameObject;
+            var instance = NodeMaker.CreateNode("VariableNode", transform.position + new Vector3(0, -0.1f, 0),
+                                    transform.rotation);
             instance.GetComponent<VariableNode>().Initialize(VarName);
             return instance;
         }
@@ -26,9 +26,12 @@ namespace Audubon.Node
             return VarName;
         }
 
-        void IHasEventOnCatched.ClickEvent(SteamVR_Controller.Device controller)
+        void IClickEvent.ClickEvent(SteamVR_Controller.Device controller)
         {
-            CreateVariableNode();
+            if (_prevNode != null && _prevNode.transform.position == _initPosition)
+                return;
+            _prevNode = CreateVariableNode();
+            _initPosition = _prevNode.transform.position;
         }
     }
 }
