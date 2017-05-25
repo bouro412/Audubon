@@ -9,18 +9,7 @@ namespace Audubon.Lang {
         public IAst Then;
         public IAst Else;
 
-        public void UpdateArgs(IEnumerable<IAst> args) {
-            try {
-                var a = args.ToArray();
-                Cond = a[0];
-                Then = a[1];
-                Else = a[2];
-            } catch (System.IndexOutOfRangeException) {
-                return;
-            }
-        }
-
-        public Value eval(Env env) {
+        Value IAst.eval(Env env) {
             if (Cond == null || Then == null) {
                 Debug.LogError("引数が足りません");
                 return null;
@@ -43,7 +32,7 @@ namespace Audubon.Lang {
 
         }
 
-        public string information() {
+        string IAst.information() {
             return "if";
         }
     }

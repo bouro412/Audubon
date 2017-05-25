@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using Audubon.Lang;
 
 namespace Audubon.Node
@@ -11,6 +12,12 @@ namespace Audubon.Node
     [RequireComponent(typeof(Collider))]
     public class ArgPipe : MonoBehaviour
     {
+        /// <summary>
+        /// ©•ª©g‚ğ‹z‚Á‚Ä‚µ‚Ü‚¤ê‡‚Í‚±‚±‚É“o˜^‚·‚é
+        /// </summary>
+        [SerializeField]
+        private GameObject[] SelfObjects;
+
         /// <summary>
         /// ó‚¯æ‚Á‚½ˆø”‚ÌAST
         /// </summary>
@@ -54,7 +61,7 @@ namespace Audubon.Node
             if (_ast == null
                 && collider.gameObject.GetComponent<IAstNode>() != null
                 && collider.gameObject.GetComponent<Joint>() == null
-
+                && !SelfObjects.Contains(collider.gameObject)
                 )
             {
                 var node = collider.gameObject.GetComponent<IAstNode>();
