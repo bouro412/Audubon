@@ -52,6 +52,9 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -66,6 +69,9 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
@@ -181,9 +187,10 @@
     <Compile Include="Assets\Script\CatchNode.cs" />
     <Compile Include="Assets\Script\FieldManager.cs" />
     <Compile Include="Assets\Script\Interface\ICatchable.cs" />
+    <Compile Include="Assets\Script\Interface\IClickEvent.cs" />
     <Compile Include="Assets\Script\Interface\IClickable.cs" />
     <Compile Include="Assets\Script\Interface\IFunctor.cs" />
-    <Compile Include="Assets\Script\Interface\IHasClickEvent.cs" />
+    <Compile Include="Assets\Script\Interface\IHasEventOnCatched.cs" />
     <Compile Include="Assets\Script\Interface\IMonad.cs" />
     <Compile Include="Assets\Script\Lang\Const.cs" />
     <Compile Include="Assets\Script\Lang\Env.cs" />
@@ -204,12 +211,15 @@
     <Compile Include="Assets\Script\Menu\IMenu.cs" />
     <Compile Include="Assets\Script\Menu\IntMenu.cs" />
     <Compile Include="Assets\Script\Menu\Menu.cs" />
+    <Compile Include="Assets\Script\Menu\OperatorMenu.cs" />
     <Compile Include="Assets\Script\Node\ArgPipe.cs" />
     <Compile Include="Assets\Script\Node\ExpNode.cs" />
     <Compile Include="Assets\Script\Node\FunctionNode.cs" />
     <Compile Include="Assets\Script\Node\IAstNode.cs" />
+    <Compile Include="Assets\Script\Node\IfNode.cs" />
     <Compile Include="Assets\Script\Node\LambdaNode.cs" />
     <Compile Include="Assets\Script\Node\Node.cs" />
+    <Compile Include="Assets\Script\Node\NodeMaker.cs" />
     <Compile Include="Assets\Script\Node\ValueNode.cs" />
     <Compile Include="Assets\Script\Node\VariableNode.cs" />
     <Compile Include="Assets\Script\Node\VariableSourceNode.cs" />
